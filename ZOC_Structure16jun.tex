@@ -1,0 +1,2070 @@
+
+\iffalse
+\documentclass[12pt, a4paper, oneside]{article}
+
+\usepackage[T2A]{fontenc}
+%\usepackage[utf8]{inputenc}
+\usepackage[koi8-r]{inputenc}
+\usepackage[russian]{babel}
+
+\usepackage{amsmath,amsfonts,amssymb,mathrsfs,amscd,amsthm}
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{showlabels}
+\usepackage[left=3cm,right=1.5cm,top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+\usepackage{epsfig}
+\linespread{1}
+
+\begin{document}
+\fi
+
+%\documentclass[12pt, a4paper, oneside]{article}
+\documentclass[pra,preprint,showpacs]{revtex4}
+\usepackage[centertags]{amsmath}
+\usepackage[koi8-r]{inputenc}
+%\usepackage[russian]{babel}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm} 
+\usepackage{newlfont}
+\usepackage{epsfig}
+\usepackage{amscd}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{footnote}
+\usepackage{lipsum}
+\usepackage{showlabels}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{subfig}
+%\topmargin=-0.5cm
+\usepackage{amscd}
+\newcommand{\NN}{{\mathbb N}}
+\newcommand{\EE}{{\mathbb E}}
+\newcommand{\RR}{{\mathbb R}}
+\newcommand{\ZZ}{{\mathbb Z}}
+\newcommand{\GG}{{\mathbb G}}
+\newcommand{\CC}{{\mathbb C}}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\ba}{\begin{array}}
+\newcommand{\ea}{\end{array}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\begin{document}
+
+
+
+\begin{center}
+{\large \sc \bf {Transfer of 0-order coherence matrix along spin-1/2 chain}
+}
+
+
+\vskip 15pt
+
+
+
+{\large 
+%G.F.Bochkin$^1$,
+%E.B.Fel'dman$^1$,  A.N.Pechen$^{2,3}$ and  A.I.~Zenchuk$^1$ 
+G.F.Bochkin$^1$, E.B.Fel'dman$^1$,  I.D.Lasarev$^1$, A.N.Pechen$^{2,3}$ and  A.I.~Zenchuk$^1$ 
+}
+
+\vskip 8pt
+
+
+
+{\it $^1$Institute of Problems of Chemical Physics, RAS,
+Chernogolovka, Moscow reg., 142432, Russia}.
+
+{\it $^2$Steklov Mathematical Institute of Russian Academy of Sciences, Gubkina str. 8, Moscow 119991, Russia}
+
+{\it $^3$National University of Science and Technology ''MISIS'', Leninski prosp. 4, Moscow 119049, Russia}
+
+\vskip 8pt
+
+\end{center}
+%\today
+
+\begin{abstract}
+There is a large class of quantum states which include only 0-order coherence matrix. 
+Requiring  the perfect transfer of such states   we  fix in a certain way   all the elements in the density matrices of the initial sender state. 
+In certain cases, to provide such transfer, some elements of the  sender's initiual density  matrix must be zero. Then, to create correspondent zero elements in the receiver's density matrix at the required  time instant we have to implement the extended receiver technique with the unitary transformation.   The asymptotic of teh pointed above perfectly transferable 0-order coherence matrix for long chain is discussed and deviation from this asymptotic is studied for a finite chain is studied.
+The problem of arbitrary parameter transfer via 0-order coherence matrix  is also considered. 
+
+\end{abstract}
+
+%{\bf Keywords:} two-channel communication line; extended receiver; unitary transformation;  %scalar product; multiple-quantum coherence matrices; quantum computation
+
+\maketitle
+
+
+
+
+
+
+
+\section{Introduction}
+\label{Section:introduxtion}
+
+The problem of perfect state transfer (PST) was intensively investigated after the state transfer problem was stated in Ref.\cite{Bose}. It seamed out that PST in spin chains is achievable in very specific cases \cite{CDEL,KS} and can  be easily destroyed into the high probability state transfer (HPST) \cite{ZASO}. HPST is simpler for realization \cite{GKMT,GMT} and  it demonstrates stability  relative small perturbations of the Hamiltonian \cite{ZASO2}. One has to emphasize that the main idea of PST 
+is to use such coupling constants in the Hamiltonian that provide proper rational numbers for all ratios of eigenvalues of the Hamiltonian. Of course, this requirement is very sensitive to the variations in environment, but nevertheless it serves as a referee point in state transfer protocols. 
+
+Although HPST is more reliable then PST, nevertheless the state transfer fidelity decreases with the chain length. 
+%Many methods are proposed to break this obstacle \cite{}. 
+One of the methods to partially overcome this obstacle is the tool of extended receiver (i.e., receiver united with a few nearest nodes) with the unitary transformation, which was also effective in remote state creation \cite{BZ_2018}. 
+
+Later the concept of transfer of multi-quantum coherence matrix was introduced  \cite{FZ_2017}.
+Then, it was pointed in \cite{BFZ_Arch2018} that if a 3-partite  spin system (sender, $S$, transmission line, $TL$, and receiver, $R$)  is in the strong external magnetic field, then the zero-order coherence matrix of a special form can be perfectly transferred along the spin chain with the only requirement to the Hamiltonian for conserving the excitation number of a spin system and, in addition, the  initial state of $TL\cup R$ must be 0-order coherence matrix (it is a thermodynamic equilibrium state in \cite{BFZ_Arch2018}). Notice that the unitary transformation on extended receiver was not used there. Next, in \cite{FPZ_Arxiv2021}, the problem of perfect transfer of 0-order coherence matrix  was studied for the case of ground initial state of $TL\cup R$. In that case, an additional unitary transformation must be applied to the final receiver's state  and the important feature of this transformation is that it does not conserve the excitation number. In fact, this transformation exchanges two elements of the receiver density matrix: the elements corresponding to 0- and maximal excitation number. 
+
+Resuming results of Refs.\cite{FZ_2017,BFZ_Arch2018,Z_2018,FPZ_Arxiv2021}, the concept of optimal state transfer was formulated. 
+This optimal transformation is the structural restoring of the higher order coherence matrices of the initial sender's state and perfect transfer of the 0-order coherence matrix, or, if desired,  the structural restoring of the whole nondiagonal part of the receiver's initial state and perfect transfer of its diagonal part. Structural restoring of some block of the transferred density matrix means that each element of this block in the receiver's density matrix  differs from the appropriate element of the sender's density matrix by a factor. Such restoring is achievable due to the optimizing unitary transformation of the extended receiver which plays a crucial role in the optimal state transfer. We emphasize that the above factors in the restorred state as well as the optimizing transformation are universal object which are defined by the interaction Hamiltonian and time instant for receiver's state registration and do not depend on the particular sender's initial state to be transferred. 
+
+All this motivates the detailed study of the 0-order coherence matrix which is the subject of our paper. 
+The basic problems to be explored are following.
+\begin{enumerate}
+\item
+Find the structure of the perfectly transferable 0-order coherence matrix (PTZ)  in a long chain (the asymptotic PTZ) and study deviation of the PTZ from the asymptotic one.
+\item
+Study PTZ for the case of restricted initial sender's state.
+\item
+Explore and optimize the protocol for an arbitrary parameter transfer via the non-diagonal elements of the 0-order coherence matrix.
+\end{enumerate}
+Remark, that the possibility to encode free parameter in the nondiagonal part of 0-order coherence matrix was shown in \cite{}.  Here we combine it with the perfect transfer of the diagonal part of the 0-order coherence matrix and optimize the scale factor in the restored matrix. 
+
+
+The paper is organized as follows. .... 
+
+
+
+
+
+\section{General structure of density matrix}
+\label{Section:dm}
+
+Any density matrix $\rho$ can be represented as the sum of multi-quantum (MQ)coherence matrices:
+\begin{eqnarray}
+\rho=\sum_{n=-N}^N \rho^{(n)},\;\;[\rho^{(n)},I_z]=n \rho^{(n)},\;\; 
+\end{eqnarray}
+where $\rho^{(n)}$ is the $n$-order coherence matrix, $I_z=\sum_i I_{zi}$ is the $z$-projection of the total spin momentum of the considered system, $I_{zi}$ is the $z$-projection of  the $j$th spin momentum. According to the definition of  $\rho^{(n)}$, the $N$-qubit density matrix $\rho$, has the following block-structure:
+\begin{eqnarray}\label{blocks}
+\rho= \left(\begin{array}{c|c|c|c|c|c}
+%\hline
+\sigma^{(0)}_{0,0}&\sigma^{(1)}_{0,1}&\sigma^{(2)}_{0,2}&\cdots& \sigma^{(N-1)}_{0,N-1}&\sigma^{(N)}_{0,N}\cr\hline
+\sigma^{(-1)}_{1,0}&\sigma^{(0)}_{1,1}&\sigma^{(1)}_{1,2}&\cdots& \sigma^{(N-2)}_{1,N-1}&\sigma^{(N-1)}_{1,N}\cr\hline
+\sigma^{(-2)}_{2,0}&\sigma^{(-1)}_{2,1}&\sigma^{(0)}_{2,2}&\cdots& \sigma^{(N-3)}_{2,N-1}&\sigma^{(N-2)}_{2,N}\cr\hline
+\cdots&\cdots&\cdots&\cdots&\cdots&\cdots\cr\hline
+\sigma^{(-2)}_{N-1,0}&\sigma^{(-1)}_{N-1,1}&\sigma^{(0)}_{N-1,2}&\cdots& \sigma^{(0)}_{N-1,N-1}&\sigma^{(1)}_{N-1,N}\cr\hline
+\sigma^{(-N)}_{N,0}&\sigma^{(-N+1)}_{N,1}&\sigma^{(N-2)}_{N,2}&\cdots& \sigma^{(1)}_{N,N-1}& \sigma^{(0)}_{N,N}\cr
+%\hline
+\end{array}\right).
+\end{eqnarray}
+Each block $\sigma^{(n)}_{i,j}$ is included into the $n$-order coherence matrix and has dimension $D_{i}\times D_{j}$ ($n=j-i$),
+where $D_{i}$ is the dimension of the $i$-excitation subspace. Thus, for the $N$-qubit system we have:
+\begin{eqnarray}
+\; D_{k}=
+\left(\begin{array}{c}
+N\cr k \end{array}\right) ,\;\;k=0,1,\dots,N.
+\end{eqnarray}
+In particular, $D_{0}=D_{N}=1$, $D_{1}=N$. Therefore, the blocks in (\ref{blocks}) are not square matrices in general. 
+
+\section{Evolution conserving excitation number}
+We consider the evolution of the spin chain governed by the  $XX$-Hamiltonian  
+\begin{eqnarray}\label{XXall}\label{XX}
+H=\sum_{j>i} D_{ij}(I_{i;x}I_{j;x}+I_{i;y}I_{j;y}),
+\end{eqnarray}
+where $D_{ij}=\frac{\gamma^2 \hbar}{r_{ij}^3}$ is the coupling constant,  $\gamma$ is the gyromagnetic ratio, 
+$\hbar$  is the Planck constant. For the homogeneous chain we have $r_{i,i+1}=r$, therefore the coupling constants between the nearest neighbors are the same. Hereafter we deal with the homogeneous spin chain.
+This Hamiltonian satisfies the commutation relation 
+\begin{eqnarray}\label{comm}
+[H,I_z]=0,
+\end{eqnarray}
+and therefore has the following block-diagonal structure:
+\begin{eqnarray}\label{block}
+H={\mbox{diag}}(H^{(0)},H^{(1)},\dots,H^{(N)}),
+\end{eqnarray}
+where the dimension of the block $H^{(n)}$ is $D_n\times D_n$.
+The 
+evolution operator generated by the Hamiltonian (\ref{block}) $V(t)=e^{-i H t}$ has also the  block-diagonal structure 
+\begin{eqnarray}\label{bV}
+V={\mbox{diag}}(V^{(0)},V^{(1)},\dots,V^{(N)}),\;\;V^{(i)} = e^{-i H^{(i)} t}
+\end{eqnarray}
+with the appropriate dimension of the blocks  $V^{(n)}$. 
+This means that each block $\sigma^{(n)}_{i,j}$ evolves independently 
+\begin{eqnarray}
+\label{b_ev}
+\sigma^{(n)}_{i,j}(t) = V^{(i)}(t) \sigma^{(n)}_{i,j}(0)  (V^{(j)}(t))^+.
+\end{eqnarray}
+
+\subsection{State propagation}
+Now we consider the communication line including the sender ($S$), transmission line ($TL$) and receiver ($R$) and describe the state propagation from the sender to the receiver. 
+
+
+Suppose that we have $K$-excitation initial state of the $N^{(S)}$-qubit sender, $K\le N^{(S)}$:
+\begin{eqnarray}\label{blocksS}
+\rho^{(S)}= \left(\begin{array}{c|c|c|c|c|c}
+%\hline
+s^{(0)}_{0,0}&s^{(1)}_{0,1}&s^{(2)}_{0,2}&\cdots& s^{(K-1)}_{0,K-1}&s^{(K)}_{0,K}\cr\hline
+s^{(-1)}_{1,0}&s^{(0)}_{1,1}&s^{(1)}_{1,2}&\cdots& s^{(K-2)}_{1,K-1}&s^{(K-1)}_{1,K}\cr\hline
+s^{(-2)}_{2,0}&s^{(-1)}_{2,1}&s^{(0)}_{2,2}&\cdots& s^{(K-3)}_{2,K-1}&s^{(K-2)}_{2,K}\cr\hline
+\cdots&\cdots&\cdots&\cdots&\cdots&\cdots\cr\hline
+s^{(-2)}_{K-1,0}&s^{(-1)}_{K-1,1}&s^{(0)}_{K-1,2}&\cdots& s^{(0)}_{K-1,K-1}&s^{(1)}_{K-1,K}\cr\hline
+s^{(-K)}_{K,0}&s^{(-K+1)}_{K,1}&s^{(K-2)}_{K,2}&\cdots& s^{(1)}_{K,K-1}& s^{(0)}_{K,K}\cr
+%\hline
+\end{array}\right).
+\end{eqnarray}
+The dimension of each block $s^{(k)}_{i,j}$  is $D^{(S)}_i \times D^{(S)}_j$,
+\begin{eqnarray}
+\; D^{(S)}_{k}=
+\left(\begin{array}{c}
+N^{(S)}\cr k \end{array}\right) ,\;\;k=0,1,\dots,K.
+\end{eqnarray}
+As was shown in \cite{FZ_2017}, to arrange the independent propagation of the MQ-coherence matrices from the sender to the receiver, two following sufficient conditions  must be imposed on the initial state.
+\begin{enumerate}
+\item
+The initial state  has the tensor-product form:
+\begin{eqnarray}
+\rho(0)=\rho^{(S)}(0)\otimes \rho^{(TL,R)}(0),
+\end{eqnarray}
+where $\rho^{(S)}(0)$ and $\rho^{(TL,R)}(0)$ are, respectively,  the initial states of the sender and transmission line joined with the receiver.
+\item
+The initial state $\rho^{(TL,R)}(0)$ must include only 0-order coherence matrix, the ground state in our paper.
+\end{enumerate}
+Then the evolution of the state of the whole $N$-qubit  system $S-TL-R$ is described by the 
+ density matrix $\rho$ (\ref{blocks})  of the similar block structure. 
+We emphasize that the excitation number remains the same, and the elements of the particular block $s^{(n)}_{i,j}$ appear only in the appropriate block $\sigma^{(n)}_{i,j}$, i.e., the following 
+ block-map is established:
+\begin{eqnarray}\label{S_L}
+s^{(k)}_{ij} \to \sigma^{(k)}_{ij},\;\;k=1,\dots,K.
+\end{eqnarray}
+This map increases the dimension of each block.
+
+Next, the state of the receiver at some time instant $t$ reads
+\begin{eqnarray}\label{blocksR}
+\rho^{(R)}={\mbox{Tr}}_{S,TL}\rho(t)=\left(
+\begin{array}{c|c|c|c|c|c}
+%\hline
+r^{(0)}_{0,0}&r^{(1)}_{0,1}&r^{(2)}_{0,2}&\cdots& r^{(K-1)}_{0,K-1}&r^{(K)}_{0,K}\cr\hline
+r^{(-1)}_{1,0}&r^{(0)}_{1,1}&r^{(1)}_{1,2}&\cdots& r^{(K-2)}_{1,K-1}&r^{(K-1)}_{1,K}\cr\hline
+r^{(-2)}_{2,0}&r^{(-1)}_{2,1}&r^{(0)}_{2,2}&\cdots& r^{(K-3)}_{2,K-1}&r^{(K-2)}_{2,K}\cr\hline
+\cdots&\cdots&\cdots&\cdots&\cdots&\cdots\cr\hline
+r^{(-2)}_{K-1,0}&r^{(-1)}_{K-1,1}&r^{(0)}_{K-1,2}&\cdots& r^{(0)}_{K-1,K-1}&r^{(1)}_{K-1,K}\cr\hline
+r^{(-K)}_{K,0}&r^{(-K+1)}_{K,1}&r^{(K-2)}_{K,2}&\cdots& r^{(1)}_{K,K-1}& r^{(0)}_{K,K}\cr
+%\hline
+\end{array}\right).
+\end{eqnarray}
+Again, this matrix includes up to $K$-excitation blocks and dimensionality of each block $r^{(k)}_{ij}$ is reduces to  $D^{(R)}_i \times D^{(R)}_j$, $D^{(R)}_i<D_i$,
+\begin{eqnarray}
+\; D^{(R)}_{k}=
+\left(\begin{array}{c}
+N^{(R)}\cr k \end{array}\right) ,\;\;k=0,1,\dots,K.
+\end{eqnarray}
+In particular, if $N^{(S)}=N^{(R)}$, then $D^{(R)}_i = D^{(S)}_i$.
+Now the map of blocks $\sigma^{(n)}_{i,j}$ to blocks 
+$r^{(n)}_{i,j}$ is more complicated then the map (\ref{S_L}). Calculating ${\mbox{Tr}}_{TL,S} \;\rho$  we calculate trace of each block $\sigma^{(k)}_{i,j}$. Since $j=i+k$ in the notation $\sigma^{(k)}_{i,j}$, we can write
+\begin{eqnarray}\label{red0}
+{\mbox{Tr}}_{S,TL}\sigma^{(k)}_{i,i+k} = \sum_{l=0}^i \tilde\sigma^{(k;i)}_{l,l+k},\;\;i=0,\dots,K-k,
+\end{eqnarray}
+where each term $\tilde\sigma^{(k;i)}_{l,l+k}$ contributes into the block  $r^{(k)}_{l,l+k}$. 
+Therefore we have
+\begin{eqnarray}\label{red}
+r^{(k)}_{l,l+k} = \sum_{i=0}^{K-k}  \tilde \sigma^{(k,i)}_{l,l+k}.
+\end{eqnarray}
+
+%The transfer and structural restoring  of the $n$-order ($|n|>0$) coherence matrix (and of the nondiagonal elements of 0-%order coherence matrix) was considered in Refs.\cite{BFZ_Arch2018,Z_2018,FPZ_arxiv2021}, where the perfect transfer of 0-%order coherence matrix was also presented.
+%It was shown that, using the unitary transformation of the extended receiver,  the elements of the higher-order coherence %matrices of the sender's initial state (more generally, any nondiagonal elements of this state) can be restored in the %receiver density matrix of the same dimensionality up to a scalar factor. However, the diagonal elements (which are %included into the 0-order coherence matrix) can not be treated in this way. This motivates us to study 0-order coherence %matrix in more details. 
+Hereafter we concentrate on the evolution of 0-order coherence matrix. We show that the perfectly  transferable 0-order coherence matrix   can be constructed for  the case $K=N^{(S)}$ without involving extended receiver, while for the case $K<N^{(S)}$  we have to involve special unitary transformation of the extended receiver to reach the goal. 
+
+
+\section{0-order coherence matrix}
+
+Hereafter we adopt the following notation:
+\begin{eqnarray}\label{zeroorder}
+&&
+s^{(0)}_{k,k}=s^{(k)},\\\nonumber
+&&
+r^{(0)}_{k,k}=r^{(k)},\\\nonumber
+&&
+\sigma^{(0)}_{k,k}=\sigma^{(k)}.
+\end{eqnarray}
+
+
+
+In the case of the sender  initial state including only 0-order coherence matrix formulae (\ref{blocksS}), (\ref{blocks}), (\ref{blocksR}) read, respectively, 
+\begin{eqnarray}\label{blocksS0}
+&&
+\rho^{(S)} = {\mbox{diag}} (s^{(0)},\dots, s^{(K)}),\\
+\label{blocksSTLR0}
+&&
+\rho = {\mbox{diag}} (\sigma^{(0)},\dots, \sigma^{(K)}),\\
+\label{blocksR0}
+&&
+\rho^{(R)} = {\mbox{diag}} (r^{(0)},\dots, r^{(K)}).
+\end{eqnarray}
+and formulas (\ref{red0}) reduces to 
+\begin{eqnarray}\label{red02}
+{\mbox{Tr}}_{S,TL}\sigma^{(i)} = \sum_{l=0}^i \tilde\sigma^{(i;l)},\;\;i=0,\dots,K,
+\end{eqnarray}
+where each term $\tilde\sigma^{(i;l)}$ contributes into the block  $r^{(l)}$,  
+and (\ref{red})
+gets the form
+\begin{eqnarray}\label{red2}
+r^{(l)} = \sum_{i=0}^{K}  \tilde \sigma^{(i;l)}.
+\end{eqnarray}
+Thus,
+ for a fixed $l$, each block $r^{(l)}$ depends not only on the elements of the block 
+$\sigma^{(l)}$, but on the elements of the blocks $\sigma^{(j)}$ with $j>l$. 
+Therefore, we can calculate the number $P^{(0)}_{i}$ of the real parameters of the initial state $\rho^{(S)}(0)$  in each element of the  block $r^{(l)}$
+\begin{eqnarray}
+P^{(l)} = \sum_{j=l}^{K} (D^{(S)}_j)^2,
+\end{eqnarray}
+where $(D^{(S)}_j)^2$ is the number of elements in $\sigma^{(j)}$.
+These parameters appear in the linear combinations for all $D^{(S)}_l\times  D^{(S)}_l$ elements in the block $r^{(l)}$.
+The total number of different real coefficients ahead of these parameters  in the nondiagonal part of the $l$th block equals
+\begin{eqnarray}
+D^{(R)}_{l}(D^{(R)}_{l}-1) P^{(l)}.
+\end{eqnarray}
+The structural restoring of the nondiagonal part of this  block requires 
+presence only $D^{(R)}_{l}(D^{(R)}_{l}-1)$ real parameters of the matrix  $\rho^{(S)}$ in this block. 
+Therefore, the number of extra parameters is
+\begin{eqnarray}
+Q^{(l)}= D^{(R)}_{l}(D^{(R)}_{l}-1) (P^{(l)}-1).
+\end{eqnarray}
+The total number of extra parameters in the nondiagonal part of $0$-order coherence matrix is
+\begin{eqnarray}
+Q =\sum_{l=0}^{K}Q^{(l)} .
+\end{eqnarray}
+\iffalse
+\begin{eqnarray}\label{blocksSTLR}
+\rho= \begin{array}{|c|c|c|c|c|c|}
+\hline
+p^{(0)}_{0,0}&p^{(1)}_{0,1}&p^{(2)}_{0,2}&\cdots& p^{(N-1)}_{0,N-1}&p^{(N)}_{0,N}\cr\hline
+p^{(-1)}_{1,0}&p^{(0)}_{1,1}&p^{(1)}_{1,2}&\cdots& p^{(N-2)}_{1,N-1}&p^{(N-1)}_{1,N}\cr\hline
+p^{(-2)}_{2,0}&p^{(-1)}_{2,1}&p^{(0)}_{2,2}&\cdots& p^{(N-3)}_{2,N-1}&p^{(N-2)}_{2,N}\cr\hline
+\cdots&\cdots&\cdots&\cdots&\cdots&\cdots\cr\hline
+p^{(-2)}_{N-1,0}&p^{(-1)}_{N-1,1}&p^{(0)}_{N-1,2}&\cdots& p^{(0)}_{N-1,N-1}&p^{(1)}_{N-1,N}\cr\hline
+p^{(-N)}_{N,0}&p^{(-N+1)}_{N,1}&p^{(N-2)}_{N,2}&\cdots& p^{(1)}_{N,N-1}& p^{(0)}_{N,N}\cr
+\hline
+\end{array}.
+\end{eqnarray} 
+The dimensionality of each block $p^{(k)}_{ij}$  is $D_i \times D_j$,
+\begin{eqnarray}
+\; D_{k}=
+\left(\begin{array}{c}
+N\cr k \end{array}\right) ,\;\;k=0,1,\dots,K.
+\end{eqnarray}
+\fi
+
+
+\iffalse
+We use the basis  of eigenvectors of the operator $I_z$  in the state space of the $N$-qubit  system and order this basis as follows:
+\begin{eqnarray}
+&&{\mbox{zero-excitation subspase}}: |0\rangle,\\\nonumber
+&&{\mbox{one-excitation subspase}}: |n\rangle,\;\; 1\le n\le N,\\\nonumber
+&&\cdots,\\\nonumber
+&&{\mbox{$k$-excitation subspase}}: |n_1 \dots n_k\rangle,\;\; 1\le n_1<n_2<\dots<n_k\le N\\\nonumber
+&&\cdots,\\\nonumber
+&&{\mbox{$N$-excitation subspase}}: |1\rangle,
+\end{eqnarray}
+where $|0\rangle$ and $|1\rangle$ mean, respectively, states with all nonexcited and excited spins.
+\fi
+
+\subsubsection{Asymptotic receiver's state }
+
+The asymptotic form of the receiver's state for large chain length $N$ is proposed by  formula (\ref{red2}) and by the fact that $\rho_{ij}\to 0$ with $N\to \infty$ just because of dispersion and since the number of eigenvalues of the Hamiltonian equals $2^N$ in general, i.e. it grows with $N$. Therefore, the asymptotic state of the receiver is expected to be the ground state:
+\begin{eqnarray}\label{rhoRas}
+\rho^{(R;0)} = {\mbox{diag}}(1,0,\dots,0).
+\end{eqnarray}
+
+
+\subsection{Unitary transformation}
+To handle the structure of the nondiagonal elements of the zero-order coherence matrix we use the unitary transformation $U$ of the so-called extended receiver (the receiver joined with several neighboring spins). 
+%The structural restoring of all non-zero order coherence matrices require the unitary transformation of the 
+%extended receiver which removes dependence on all extra elements of the density matrix. 
+The unitary transformation of the $N^{(ER)}$-qubit  extended receiver has also the diagonal  block structure:
+\begin{eqnarray}\label{U}
+U(\varphi)={\mbox{diag}}(1,U^{(1)}(\varphi^{(1)}) ,\dots,U^{(N^{(ER)}}(\varphi^{(N^{(ER)}})),
+\end{eqnarray}
+where $\varphi=(\varphi^{(1)},\dots,\varphi^{(N^{(ER)}})$, and $\varphi^{(k)}$ is the sets of free parameters in the block $U^{(k)}$:
+$\varphi^{(k)}= (\varphi^{(k)}_1,\dots, \varphi^{(k)}_{F^{(k)}})$.
+As was stated in Ref.\cite{Z_2018}, only nondiagonal elements of $U$ are effective. 
+Therefore the number  of free real non-diagonal  parameters in the $k$th block of $U$ reads
+\begin{eqnarray}
+F^{(k)} = D^{(ER)}_{k}(D^{(ER)}_{k}-1), \;\;k=1,\dots, N^{(ER)}-1,\;\;F^{(0)}=F^{( N^{(ER)})}=0.
+\end{eqnarray}
+Thus, the total number of free parameters is
+\begin{eqnarray}
+F = \sum_{n=1}^{N-1} F^{(n)}.
+\end{eqnarray}
+However, only blocks of $U$  with up to $K$ excitations are effective, where $K$ is the excitation number in 
+$\rho^{(S)}(0)$. Therefore, the number of effective parameters equals
+\begin{eqnarray}
+F_{eff} = \sum_{n=1}^{K} F^{(n)}.
+\end{eqnarray}
+We combine the  evolution operator $V$ and transformation $U$ into the single operator
+$W$:
+\begin{eqnarray}
+W(t)=I_{S,TL'}\otimes U V(t),
+\end{eqnarray}
+where $TL'$ is the transmission line without the nodes of the extended receiver. Of cause, $W$ has the block-structure (\ref{bV}).
+
+Although using the unitary transformation we can not completely restore the diagonal elements of 0-order coherence matrix, but we can use these parameters to 
+restore the nondiagonal elements of the 0-order coherence matrix. This can be useful, in particular, to keep the required form  of zero-order coherence matrix, which ill be used below.
+
+
+\subsection{Complete state space of initial sender state}
+\label{Section:complete}
+First we consider the complete state space of the $N^{(S)}$-qubit  sender and receiver, i.e., the basis consists of all  vectors 
+with excitation numbers  from 0 to $N^{(S)}$.
+
+In this case the sender and receiver  state read 
+\begin{eqnarray}\label{compl}
+\rho^{(S)}  ={\mbox{diag}}(s^{(0)},s^{(1)},\dots,s^{(N^{(S)})}),
+\rho^{(R)}  ={\mbox{diag}}(r^{(0)},r^{(1)},\dots,r^{(N^{(S)})}),
+\end{eqnarray}
+where both $s^{(0)}$ and $s^{(N^{(S)})}$ are scalars.
+We select the time instant for state registration $t^{(N^{(S)})}_{(N^{(S)})}$ as the first maximum of the probability  $T^{(N^{(S)})} $  of the  transfer of the $N^{(S)}$-qubit pure state with 
+ $N^{(S)}$ excitations (\cite{FPZ_arxiv2021}),
+\begin{eqnarray}\label{rps}
+r^{(N^{(S)})}=  T^{(N^{(S)})} s^{(N^{(S)})},\;\;p^{(N^{(S)})}\le 1.
+%T_{1_R1_R;1_S1_S}(t) s^{(N^{(S)})},\;\;
+%T_{1_R1_R;1_S1_S}(t)\neq 1.
+%\;\;|\alpha|<1. 
+\end{eqnarray}
+This time instant  is essentially a linear function of the chain length $N$, as is demonstrated in 
+Table \ref{Table:time} for the $XX$-Hamiltonian (\ref{XX}) with $N^{(S)}=2$ and $3$ .
+
+Eq.(\ref{rps}) means that 
+ $r^{(N^{(R)})}\neq s^{(N^{(R)})}$, therefore, the equality $\rho^{(R)}(t)=\rho^{(S)}(0)$ is impossible for any $t$. But we can require 
+ the elements of $s^{(n)}(0)$ to be  solutions to  the following system
+at  time instant $t^{(N^{(S)})}_{(N^{(S)})}$:
+\begin{eqnarray}\label{syst1}
+&&r^{(k)}(t^{(N^{(S)})}_{(N^{(S)})}) = s^{(k)}(0),\;\;1\le k\le N^{(R)}-1,\\\label{syst12}
+&&r^{(N^{(R)})}(t^{(N^{(S)})}_{(N^{(S)})}) = s^{(0)}(0).
+\end{eqnarray}
+Then $\rho^{(R)}(t^{(N^{(S)})}_{(N^{(S)})})$ coincides with $\rho^{(S)}(0)$ up to the exchange of two elements of blocks with zero and $N^{(S)}$ excitations.
+This exchange can be performed by the unitary transformation $U_{{0,N^{(S)}}}$, 
+\begin{eqnarray}\label{comm2}
+[U_{{0,N^{(S)}}},I_z]\neq 0.
+\end{eqnarray}
+
+
+\iffalse
+\begin{eqnarray}
+\begin{array}{|ccccccccccccccccccc|}
+\hline
+ 10 & 15 & 20 & 25 & 30 & 35 & 40 & 45 & 50 & 55 & 60 & 65 & 70 & 75
+   & 80 & 85 & 90 & 95 & 100 \\\hline
+ 12.8895 & 18.2025 & 23.417 & 28.5936 & 33.7448 & 38.8735 & 43.9841 & 49.0819 &
+   54.1709 & 59.2527 & 64.327 & 69.394 & 74.4547 & 79.5105 & 84.5619 & 89.6089 &
+   94.6515 & 99.6897 & 104.724 \\
+ 12.1285 & 17.2799 & 22.6385 & 27.9574 & 33.2242 & 38.4457 & 43.6307 & 48.7866 &
+   53.9177 & 59.026 & 64.1134 & 69.1819 & 74.2338 & 79.2704 & 84.2922 & 89.2997 &
+   94.2937 & 99.2753 & 104.245 \\\hline
+\end{array}
+\fi
+\iffalse
+\begin{array}{|ccccccccccccccccccc|}
+\hline
+ 10 & 15 & 20 & 25 & 30 & 35 & 40 & 45 & 50 & 55 & 60 & 65 & 70 & 75
+   & 80 & 85 & 90 & 95 & 100 \\\hline
+ 12.890 & 18.203 & 23.417 & 28.594 & 33.745 & 38.874 & 43.984 & 49.082 &
+   54.171 & 59.253 & 64.327 & 69.394 & 74.455 & 79.511 & 84.562 & 89.609 &
+   94.652 & 99.690 & 104.724 \\
+ 12.129 & 17.280 & 22.639 & 27.957 & 33.224 & 38.446 & 43.631 & 48.787 &
+   53.918 & 59.026 & 64.113 & 69.182 & 74.234 & 79.270 & 84.292 & 89.300 &
+   94.294 & 99.275 & 104.245 \\\hline
+\end{array}
+\end{eqnarray}
+\fi
+\begin{table}
+\begin{tabular}{|c|cccccccccc|}\hline
+ N & 10 & 15 & 20 & 25 & 30 & 35 & 40 & 45 & 50 & 55 \\\hline
+ $t^{(2)}_2$&12.8896 & 18.2026 & 23.4171 & 28.5937 & 33.7448 & 38.8736 & 43.9842 & 49.0820 &
+   54.1709 & 59.2527 \\
+ $t^{(3)}_1$&12.1286 & 17.2800 & 22.6386 & 27.9575 & 33.2243 & 38.4457 & 43.6308 & 48.7867 &
+   53.9178 & 59.0261 \\\hline
+\end{tabular}
+\begin{tabular}{|c|ccccccccc|}\hline
+ $N$ & 60& 65 & 70 & 75 & 80 & 85 & 90 & 95 & 100 \\\hline
+$t^{(2)}_2$& 64.3271 & 69.3941 & 74.4548 & 79.5106 & 84.5620 & 89.6089 & 94.6516 & 99.6898 &
+   104.724 \\
+$t^{(3)}_1$& 64.1135 & 69.1819 & 74.2338 & 79.2704 & 84.2923 & 89.2997 & 94.2938 & 99.2753 &
+   104.245 \\\hline
+\end{tabular}
+\caption{Time instants for state registration for different chain length $N$ governed by $XX$-Hamiltonian (\ref{XX}). $t^{(2)}_2$ and $t^{(3)}_1$ correspond, respectively,
+to 2-qubit sender with up to two excitations and 3-qubit sender with up to 1 excitation.} 
+\label{Table:time}
+\end{table}
+
+An interesting question is the dependence of the elements of the  perfectly transferred zero-order coherence  matrix on the chain length $N$. For that we have to define the asymptotic PTZ $\rho^{(S)}_\infty$, which is simple follows from the Eq.(\ref{syst12}) and asymptotic receiver's state (\ref{rhoRas}):
+\begin{eqnarray}\label{limit}
+\rho^{(S)}_{\infty}= {\mbox{diag}}(0,0,\dots, 0,1).
+\end{eqnarray}
+Therefore, all the elements of the PTZ tend to zero with $N$, except the element of the block with maximal excitation number. 
+The experiments with 2-qubit sender confirm this assumption. 
+The graph of the deviation
+\begin{eqnarray}\label{del}
+\delta = ||\rho^{(S)}_\infty- \rho^{(S)}(N)||, \;\;||A|| = \sum_{i,j} |A_{ij}|,
+\end{eqnarray}
+as a function of $N$ is shown in Fig.\ref{Fig:F} 
+\begin{figure*}[!]
+\epsfig{file=F,%communication2018optO.eps,%ScalarProd14.eps ,
+  scale=0.6
+   ,angle=0%270
+} 
+\caption{Deviation $\delta$ of the perfectly transferred state $\rho^{(S)}$ from the limiting density matrix 
+$\rho^{(S)}_{\infty}$.
+}
+  \label{Fig:F} 
+\end{figure*}
+\subsubsection{Effect on transfer of higher-order coherence matrices}
+We emphasize that the unitary transformation $U_{{0,N^{(S)}}}$ interchanges the first column (row) with the last column (row) of the matrix $\rho^{(R)}$. Therefore, using such 0-order coherence matrix to transfer the higher order coherence matrices makes restriction on their structure. Namely, the density matrix (\ref{blocksS}) now must have the following form (using notation (\ref{zeroorder})):
+\begin{eqnarray}\label{blocksS2}
+\rho^{(S)}=\left( \begin{array}{c|c|c|c|c|c}
+%\hline
+s^{(0)}&0_{1,D^{(S)}_1}&0_{1,D^{(S)}_2}&\cdots& 0_{1,D^{(S)}_{N-1}}&0_{1,D^{(S)}_{N}}\cr\hline
+0_{D^{(S)}_1,1}&s^{(1)}&s^{(1)}_{1,2}&\cdots& s^{(N-2)}_{1,N-1}&0_{D^{(S)}_{1},D^{(S)}_{N}}\cr\hline
+0_{D^{(S)}_2,1}&s^{(-1)}_{2,1}&s^{(2)}&\cdots& s^{(N-3)}_{2,N-1}& 0_{D^{(S)}_{2},D^{(S)}_{N}}  \cr\hline
+\cdots&\cdots&\cdots&\cdots&\cdots&\cdots\cr\hline
+0_{D^{(S)}_{N-1},1}&s^{(-1)}_{N-1,1}&s^{(0)}_{N-1,2}&\cdots& s^{(N-1)}&0_{D^{(S)}_{N-1},D^{(S)}_{N}}\cr\hline
+0_{D^{(S)}_{N},1}&0_{D^{(S)}_{N},D^{(S)}_{1}}&0_{D^{(S)}_{N},D^{(S)}_{2}}&\cdots&0_{D^{(S)}_{N},D^{(S)}_{N-1}}& s^{(N)}\cr
+%\hline
+\end{array}\right),
+\end{eqnarray}
+where $0_{i,j}$ is  the $i\times j$ matrix of zeros. In other words, the first column (row) and the last column (row)  of the whole matrix $\rho^{(S)}(0)$ must be zero except their diagonal elements.
+
+
+
+
+%We shell recall the formulas for the evolution of zero-order coherence matrix.
+\iffalse
+\subsection{Evolution under $XX$-Hamiltonian}
+We consider the   dynamics of the spin-1/2 chain governed by the $XX$-Hamiltonian taking into account dipole-dipole interactions  among all nodes: 
+\begin{eqnarray}\label{XXall}
+H=\sum_{j>i} D_{ij}(I_{i;x}I_{j;x}+I_{i;y}I_{j;y}),
+\end{eqnarray}
+where $D_{ij}=\frac{\gamma^2 \hbar}{r_{ij}^3}$ is the coupling constant,  $\gamma$ is the gyromagnetic ratio, $\hbar$  is the Planck constant. For the homogeneous chain   $r_{i,i+1}=r$, therefore the coupling constants between the nearest neighbors are the same.
+Following previous papers (for instance, Ref.\cite{Z_2018}) in particular examples we consider the chain of 42 nodes with 2 pairs of adjusted 
+coupling constants \cite{ABCVV} and chose the time instant $t_0$ for state registration according to (\ref{t_0}):
+% equals to the time instant of maximum of $|\rho^{(R)}_{00,11}|$ in the evolution %without applying the unitary transformation to the extended receiver:
+\begin{eqnarray}\label{nonhom}
+\delta_1=\delta_{N-1}=0.3005 \delta, \;\;\delta_2=\delta_{N-2}=0.5311 \delta, \;\;t_0 = 58.9826,
+\end{eqnarray}
+where $\delta_i=D_{i,i+1}$ and $\delta$ is the nearest-neighbor coupling constant between inner nodes of the chain, i.e. $\delta=\delta_n$, $2<n<N-2$. 
+
+We also use the homogeneous chain:
+\begin{eqnarray}
+\label{hom}
+\delta_i=\delta, \;\; 1\le i\le N-1.
+\end{eqnarray}
+\fi
+%We take the extended receiver of four nodes and unitary transformation having the %block-diagonal form.
+
+
+
+
+
+\iffalse
+\subsection{Example: 3-qubit sender  (to be moved)}
+
+Let $N^{(S)}=3$. Then system  (\ref{syst1}) can be solved to obtain
+\begin{eqnarray}
+&&
+s^{(0)}=0.00814154,\;\;s^{(0)}_{3,3} = 0.127189,\\\nonumber
+&&
+s^{(1)}=\left(
+\begin{array}{ccc}
+0.58668 & 0.134651 e^{-0.149465 i} & 0.206921 e^{2.85321 i}\cr
+0.134651e^{0.149465 i} & 0.0791862 & 0.0675444 e^{3.06852 i}\cr 
+0.206921e^{-2.85321 i} & 0.0675444 e^{-3.06852 i}& 0.0900834
+\end{array}\right)\\\nonumber
+&&
+s^{(2)}=\left(
+\begin{array}{ccc}
+0.0853512 & 0.0217654 e^{3.1200 i} & 0.0239448 e^{0.709242 i}\cr
+0.0217654e^{-3.1200 i} & 0.0148689 & 0.0066655 e^{-2.2111 i}\cr
+0.0239448e^{-0.709242 i} & 0.0066655e^{2.2111 i} & 0.00849981
+\end{array}
+\right)
+\end{eqnarray}
+\fi
+
+\subsection{Restricted state space of initial sender state}
+Suppose that the state of the  $N^{(S)}$-qubit sender includes $K<N^{(S)}$ excitations. Then, instead of (\ref{compl}) we have 
+\begin{eqnarray}\label{compl2}
+\rho^{(S)}  ={\mbox{diag}}(s^{(0)},s^{(1)},\dots,s^{(K)}),\;\;
+\rho^{(R)}  ={\mbox{diag}}(r^{(0)},r^{(1)},\dots,r^{(K)}).
+\end{eqnarray}
+The state in the form (\ref{compl2}) can not be perfectly transferred using the method in Sec.\ref{Section:complete}.  	In fact, this method assumes the final unitary  transformation that does not conserve the excitation number, see eq.(\ref{comm2}).
+Applying such trunsformation to the state of form (\ref{compl2}) we create the coherence matrices of higher order, which are excluded from consideration. To avoid this, we have to impose a special restriction on the structure of the block $\sigma^{(K)}$. Namely, let the elements of the last column and last row of this block are zeros except the single diagonal element, i.e. 
+\begin{eqnarray}
+s^{(K)}_{D^{(S)}_K,i} = 0,\;\;i<D^{(S)}_K.
+\end{eqnarray}
+Then  the structure of $s^{(K)}$ reduces to the following one:
+\begin{eqnarray}\label{tssK}
+ s^{(K)}=
+\left(\begin{array}{c|c}
+%\hline
+\tilde s^{(K)}&0_{D^{(S)}_K-1,1}\cr
+\hline
+0_{1,D^{(S)}_K-1}&s^{(K)}_{D^{(S)}_K,D^{(S)}_K}\cr
+%\hline
+\end{array}\right),
+\end{eqnarray}
+and
+\begin{eqnarray}\label{ts}
+\tilde s^{(K)}=\left(
+\begin{array}{ccc}
+s^{(K)}_{1,1}&\dots&s^{(K)}_{1,D^{(S)}_K-1}\cr
+\dots&\dots&\dots\cr
+(s^{(K)}_{1,D^{(S)}_K-1})^*&\dots&s^{(K)}_{ D^{(S)}_K-1,D^{(S)}_K-1}
+\end{array}
+\right),
+\end{eqnarray}
+%where $0_{i,j}$ is the $i\times j$ zero matrix.
+Here an below the subscripts means matrix elements.
+
+Now we can replace the system (\ref{syst1}) with the following one:
+%Then the elements of $\rho^{(S)}(0)\equiv \rho^{(S;0)}(0)$ can be found as solution to  the system
+\begin{eqnarray}\label{rsred}
+&&r^{(k)} =s^{(k)},\;\;1\le k\le K-1,\\\nonumber
+&&r^{(K)}_{i,j} = s^{(K)}_{i,j}, \;\; 1\le i,j \le D^{(S)}_K-1 %\;\; (i,j)\neq (D^{(R)}_K,D^{(R)}_K)
+,\\\nonumber
+&& s^{(K)}_{i, D^{(S)}_K} =0, \;\; 1\le i,j < D^{(R)}_K,\\\nonumber
+&&r^{(K)}_{D_K ,D_K} =s^{(0)}.
+\end{eqnarray}
+
+However, in the receiver density matrix $\rho^{(R)}$,
+the elements  $ r^{(K)}_{i ,D^{(S)}_K}$ are non zero  at $t>0$
+ because of  the mixing of the elements during the evolution. 
+Therefore, we have to involve the unitary transformation of the extended receiver to make these elements zero at certain time instant $t^{(N^{(S)})}_K$.
+To write the system for the parameters $\varphi$ of the unitary transformation, we remember the results of \cite{FPZ_arxiv2021} and write it in the following form
+\begin{eqnarray}
+r^{(k)}_{i,j}(t)=\sum_{n,m=1}^{D^{(S)}_{k}}T^{(k)}_{ij;nm}(t) s^{(k)}_{nm}(0),
+\;\;
+T^{(k)}_{ij;nm}=V^{(k)}_{i,n}(V^{(k)})^+_{mj}.
+\end{eqnarray}
+\iffalse
+, where we use the multiindexes, so that .
+\begin{eqnarray}
+|N_R|=|M_R|,\;\; |I_S|=|J_S|.
+\end{eqnarray}
+and
+\begin{eqnarray}\label{rhoNMR02}\label{rhoNMR0c}
+&&
+r^{(n)}_{N_R,M_R} = \sum_{{I_S,J_S}\atop{|I_S|=|J_S|\ge |N_R|}} T_{N_RM_R;I_SJ_S}s^{(n)}_{I_S,J_S},\\\nonumber
+&&T_{N_RM_R;I_SJ_S}= \sum_{{N_S,N_{TL}}\atop{|N_S|+|N_{TL}|=|I_S|-|N_R|}}
+V^{(|I_S|)}_{N_SN_{TL}N_R;I_S 0_{TL} 0_R} 
+(V^{(|J_S|)})^+_{J_S 0_{TL} 0_R;N_SN_{TL}M_R} .
+\end{eqnarray}
+The system to be satisfied reads 
+\begin{eqnarray}
+&&T_{D_K j;kl} =0,  \;\; j,k=1,\dots,D_K-1,\;\;l=1,\dots,D_K,\\
+&&
+T_{iD_K;kl} =0,  \;\; i,l=1,\dots,D_K-1,\;\;k=1,\dots,D_K.
+\end{eqnarray}
+\fi
+
+Then the system to be satisfied by the parameters $\varphi$ reads
+\begin{eqnarray}\label{T}
+T^{(K)}_{l,D^{(S)}_K;n,m}(t_0) =0, \;\; l=1,\dots, D^{(S)}_K-1,\;\; 
+(n,m)\neq (l,D^{(S)}_K).
+\end{eqnarray}
+Notice, that asymptotic PTZ has the form (\ref{limit}) as well, which follows from the last equation in (\ref{rsred}) and asymptotic receiver's state (\ref{rhoRas}).
+
+\section{0-order coherence matrix with up to one excitation}
+
+In this section we fix the time instant for state registration as the time instant $t^{(N^{(S)})}_1$  maximizing the sum of probabilities of the excitation transfer from any node of the sender to any node of the receiver, i.e.,
+\begin{eqnarray}\label{max2}
+\sum_{i,j=1}^{D^{(S)}_2}T^{(1)}_{ii,jj}|_{t=t^{(N^{(S)})}_1}=\max_{t} \sum_{i,j=1}^{D^{(S)}_2}T^{(1)}_{ii,jj}  
+\end{eqnarray}
+
+For the 3- and 4-node sender this time instances $ t^{(3)}_1$ and $ t^{(4)}_1$ for different chain lenthes are given in Table \ref{Table:time}.
+
+
+\subsection{Perfect state  transfer}
+We consider the perfect transfer of the 0-order coherence matrix in the basis of no more then one excitation. This strongly restricts the dimension of the considered density matrix and allows to work out carefully many aspects of the considered type of state transfer through the long chains. 
+
+The general form of the $N^{(S)}$-qubit sender initial density matrix is (\ref{tssK}), (\ref{ts}) with $K=1$.
+The solution of system (\ref{T})  ($K=1$) is not unique. 
+We find such solution that maximizes the deviation (\ref{del}). 
+In this case the unitary transformation (\ref{U}) includes the only nontrivial block $U^{(1)}$ with parameters $\varphi^{(1)}$. 
+The construction of the matrix that can be perfectly transferred consists of two steps.
+
+First, solving system (\ref{T}) with $K=1$ to fix the parameters $\varphi$ of the unitray transformation (\ref{U}).
+
+Second,  solve the system (\ref{rsred}) for the element of the initial  sender density mastrix, which for the case $K=1$ reads
+\begin{eqnarray}\label{rsred1}
+&&r^{(1)}_{i,j} = s^{(1)}_{i,j}, \;\; 1\le i,j \le N^{(S)}-1,\\\nonumber
+&&r^{(1)}_{N^{(S)},N^{(S)}} =s^{(0)}.
+\end{eqnarray}
+Since $s^{(1)}_{i, N^{(S)}} =0$,  $1\le i < N^{(S)}$, then 
+due to (\ref{T}), we obtain  $r^{(1)}_{i, N^{(S)}} =0, \;\; 1\le i < N^{(S)}$.
+
+
+
+Below we consider the cases of 3- and 4-qubit sender.
+In each case we find 2000 (???) solution of the system (\ref{T}) with $K=1$ and choose one for which the  solution to the linear system (\ref{rsred1}) yields  the maximum deviation $\delta$, given in Eq.(\ref{del}).
+
+
+\subsubsection{3-qubit sender}
+
+The optimization result depend on the dimension of the extended receiver. 
+In Fig.\ref{Fig:P34}, the deviation $\delta$ is given as a function of $N$ for different dimension of the extended receiver  $N^{(ER)}=5,6,7$.
+
+\begin{figure*}[!]
+\epsfig{file=download,%communication2018optO.eps,%ScalarProd14.eps ,
+  scale=0.3
+   ,angle=0%270
+} 
+\caption{Deviation $\delta$ of the perfectly transferred state $\rho^{(S)}$ from the limiting density matrix 
+$\rho^{(S)}_{\infty}$ as a function of $N$. Calculations are performed for each $N$, we disregard those points which deffer from the smooth curve more then ..... Cases of  3- and 4-node sender are considered  .... 
+Results for extended receiver of $N^{(ER)}=5,6$ and $7$ nodes are presented.  
+}
+  \label{Fig:P34} 
+\end{figure*}
+
+We also study the problem of vanishing  of the nondiagonal elements to zero. We measure  this vanishing by the norm
+$\delta_{nd}$:
+\begin{eqnarray}\label{delnd}
+\delta_{nd} = \sum_{i\neq j}|\rho^{(S)}_{ij}|.
+\end{eqnarray}
+
+Results are shown in Fig.\ref{Fig:nd34}
+
+
+\begin{figure*}[!]
+\epsfig{file=Screenshot 2021-06-09 at 15.38.38.eps,%communication2018optO.eps,%ScalarProd14.eps ,
+  scale=0.4
+   ,angle=0%270
+} 
+\caption{Norm $\delta_{nd}$ of the nondiagonal part of the matrix $\rho^{(S)}$ as a function of $N$. This norm vanishes with an increase in $N$.   Cases of  3- and 4-node sender are considered  .... 
+Results for extended receiver of $N^{(ER)}=5,6$ and $7$ nodes are presented.  
+}
+  \label{Fig:nd34} 
+\end{figure*}
+
+
+\subsubsection{4-qubit sender}
+
+%\subsubsection{The structure of $\rho^{(S)}(0)$ at $N\to \infty$}
+
+\subsection{Block-scaled arbitrary parameter transfer}
+Let 
+the unitray transformation of the extended receiver be such that not only the system (\ref{T}) is satisfied but also the following system holds 
+\begin{eqnarray}\label{a}
+%& r^{(1)}_{ii}=s^{(1)}_{ii},\;\; i=1,\dots,N^{(R)}-1, \\\nonumber
+&& r^{(1)}_{i,j}=a  \tilde s^{(1)}_{i,j},\;\; i\neq j, \;\; i,j=1,\dots,N^{(R)}-1, 
+\end{eqnarray}
+%
+%Then, the diagonal elements of the initial sender density mutrix must be fixed by 
+%equations 
+and, in addition, the diagonal elements of $\rho^{(S)}(0)$ satisfy the system
+\begin{eqnarray}\label{rsred12}
+&&r^{(1)}_{i,i} = s^{(1)}_{i,i}, \;\; 1\le i \le N^{(S)}-1,\\\nonumber
+&&r^{(1)}_{N^{(S)},N^{(S)}} =s^{(0)}.
+\end{eqnarray}
+Here $a$ is some real positive parameter, $a\le 1$.
+
+Eqs.(\ref{a}) and (\ref{rsred12}) yield the following system for the parameters $\varphi$:
+\begin{eqnarray}\label{aa}
+&&
+T_{ij;nm}=0,\;\;j> i,\;\;(i,j)\neq (n,m),\\\label{a2}
+&&
+T_{ij;ij}=a, \;\; i\neq j, \\\label{a3}
+&&
+T_{ii;nm}=0,\;\;n\neq m.
+\end{eqnarray}
+Then the diagonal elements $s^{(1)}_{ii}$ satisfy the system (\ref{rsred12}).
+
+
+We find  solution of system (\ref{aa}) - (\ref{a3})  that maximizes the parameter $a$.
+
+
+
+Below we conside the cases of 3- and 4-qubit sender.
+
+%2. Find $\max(a)$ and corresponding $t_0$ as functions of $N^{(R)}$.
+
+
+\subsubsection{3-qubit sender}
+
+\subsubsection{4-qubit sender}
+
+\iffalse
+\subsubsection{Example: perfectly transferred 3-quit  zero-order coherence matrix (probbaly to be removed, included into above secs.)}
+%: combination with higher order coherence matrices }
+
+Three-qubit state, up to three-excitation space .
+\begin{eqnarray}
+\begin{array}{|c|c|c|c|}
+\hline
+\rho_{0,0}&{\mathbf{ 0}}&{\mathbf 0}&{\mathbf 0}\cr
+\hline
+{\mathbf 0}&\rho^{(0)}_{I}&\rho^{(1)}_{I,II}&{\mathbf 0}\cr
+\hline
+{\mathbf 0}&\rho^{(1)}_{II,I}&\rho^{(0)}_{II}&{\mathbf 0}\cr
+\hline
+{\mathbf 0}&{\mathbf 0}&{\mathbf 0}&\rho_{1,1}\cr
+\hline
+\end{array}
+\end{eqnarray}
+
+
+
+Three-qubit state, up to two-excitation space .
+\begin{eqnarray}
+\begin{array}{|c|c|c|}
+\hline
+\rho_{0,0}&{\mathbf{ 0}}&{\mathbf 0}\cr
+\hline
+{\mathbf 0}&\rho^{(0)}_{I}&{\mathbf 0}\cr
+\hline
+{\mathbf 0}&{\mathbf 0}&\rho^{(0)}_{II}\cr
+\hline
+\end{array}
+\end{eqnarray}
+To arrange the  perfect transfer, we set the following structure  for $\rho^{(0)}_{II}$:
+\begin{eqnarray}
+\rho^{(0)}_{II}=\begin{array}{|c|c|}
+\hline
+\rho^{(0)}_{II,1}&0\cr
+\hline
+0&\rho^{(0)}_{D_2,D_2}\cr
+\hline
+\end{array}.
+\end{eqnarray}
+Then
+\begin{eqnarray}
+\begin{array}{|c|c|c|c|}
+\hline
+\rho_{0,0}&{\mathbf{ 0}}&{\mathbf 0}\cr
+\hline
+{\mathbf 0}&\rho^{(0)}_{I}&{\mathbf 0}\cr
+\hline
+{\mathbf 0}&{\mathbf 0}&
+{\small
+\begin{array}{c|c}
+\rho^{(0)}_{II,1}&0\cr
+\hline
+0&\rho^{(0)}_{D_2,D_2}
+\end{array}}\cr
+\hline
+\end{array}.
+\end{eqnarray}
+Here $\rho^{(0)}_{D_2,D_2}$ is a scalar element, while $\rho^{(0)}_{II,1}$ is a matrix.
+
+
+
+
+
+\iffalse
+\section{General structure of density matrix}
+\label{Section:dm}
+
+Any density matrix $\rho$ can be represented as the sum of multi-quantum (MQ)coherence matrices:
+\begin{eqnarray}
+\rho=\sum_{n=-N}^N \rho^{(n)},\;\;[\rho^{(n)},I_z]=n \rho^{(n)}
+\end{eqnarray}
+where $\rho^{(n)}$ is the $n$-order coherence matrix and $I_z$ is the $z$-projection of the total spin momentum of the considered system. Since  $\rho^{(n)}$  collects the elements responsible for the transitions with change of the $z$-projection of the total spin by $n$, the $n$-qubit density matrix $\rho$, has the following block-structure:
+\begin{eqnarray}\label{blocks}
+\rho= \begin{array}{|c|c|c|c|c|c|}
+\hline
+\sigma^{(0)}_{0,0}&\sigma^{(1)}_{0,1}&\sigma^{(2)}_{0,2}&\cdots& \sigma^{(N-1)}_{0,N-1}&\sigma^{(N)}_{0,N}\cr\hline
+\sigma^{(-1)}_{1,0}&\sigma^{(0)}_{1,1}&\sigma^{(1)}_{1,2}&\cdots& \sigma^{(N-2)}_{1,N-1}& \sigma^{(N-1)}_{1,N}\cr\hline
+\sigma^{(-2)}_{2,0}&\sigma^{(-1)}_{2,1}&\sigma^{(0)}_{2,2}&\cdots& \sigma^{(N-3)}_{2,N-1}& \sigma^{(N-2)}_{2,N}\cr\hline
+\cdots&\cdots&\cdots&\cdots&\cdots&\cdots\cr\hline
+\sigma^{(-2)}_{N-1,0}&\sigma^{(-1)}_{N-1,1}&\sigma^{(0)}_{N-1,2}&\cdots& \sigma^{(0)}_{N-1,N-1}& \sigma^{(1)}_{N-1,N}\cr\hline
+\sigma^{(-N)}_{N,0}&\sigma^{(-N+1)}_{N,1}&\sigma^{(N-2)}_{N,2}&\cdots& \sigma^{(1)}_{N,N-1}& \sigma^{(0)}_{N,N}\cr
+\hline
+\end{array}.
+\end{eqnarray}
+Each block $\sigma^{(n)}_{i,j}$ has its own dimensions $D^{(i)}\times D^{(j)}$ ($n=j-i$),
+where $D^{(i)}$ is the dimension of the $i$-excitation subspace. Thus, for the $N$-qubit system we have:
+\iffalse
+\begin{eqnarray}
+D^{(0)}=1,\;\;D^{(1)}=N, \;\;D^{(2)}=
+\left(\begin{array}{c}
+N\cr 2
+\end{array}\right)\;\;\dots, \;\; D^{(k)}=
+\left(\begin{array}{c}
+N\cr k \end{array}\right),    \;\;\dots\;\;D^{(N)}=1.
+\end{array}\right)
+\end{eqnarray}
+\fi
+\begin{eqnarray}
+\; D_{k}=
+\left(\begin{array}{c}
+N\cr k \end{array}\right) ,\;\;k=0,1,\dots,N.
+\end{eqnarray}
+In particular, $D_{0}=D_{N}=1$, $D_{1}=N$. Therefore, the blocks in (\ref{blocks}) are not square matrices. 
+\fi
+
+\iffalse
+\subsection{State propagation}
+
+As was shown in \cite{}, to arrange the independent propagation of the MQ-coherence matrices from the sender to the receiver, two requirements are imposed.
+\begin{enumerate}
+\item
+The initial state must have of the tensor-product form
+\begin{eqnarray}
+\rho(0)=\rho^{(S)}(0)\otimes \rho^{(TL,R)}(0),
+\end{eqnarray}
+where $\rho^{(S)}(0)$ and $\rho^{(TL,R)}(0)$ are, respectively,  the initial states of the sender and transmission line joined with the receiver.
+\item
+The initial state $\rho^{(TL,R)}(0)$ must include only 0-order coherence matrix.
+\end{enumerate}
+These two requirements guarantee that the elements of the $n$-order sender's coherence matrix   appear only in the $n$-order coherence matrix of the whole system and moreover the elements of the block $\sigma^{(S;n)}_{ij}$ become the elements of the  block 
+$\sigma^{(n)}_{ij}$ with the same $i$ and $j$. Evolution mixes the elements onside of each block 
+$\sigma^{(n)}_{ij}$. The blocks $\sigma^{(R;n)}_{ij}$ of the receiver's density matrix $\rho^{(R)}$,
+\begin{eqnarray}
+\rho^{(R)}(t)={\mbox{Tr}}_{S,TL} \rho(t),
+\end{eqnarray}
+have the following feature.
+For a fixed $i_0$, each block $\sigma^{(R;n)}_{i_0,i_0+n}$ depends not only on the elements of the block 
+$\sigma^{(s;n)}_{i_0,i_0+n}$, but on the elements of the blocks $\sigma^{(s;n)}_{i,i+n}$ with $i>i_0$. 
+Therefore, we can calculate the number $P^{(n)}_{i,j}$ of elements of $\rho^{(S)}(0)$ in each block $\sigma^{(R;n)}_{i,i+n}$.
+\begin{eqnarray}
+P^{(n)}_{i,i+n} = \sum_{k=i}^{N-n} D^{(R)}_k D^{(R)}_{k+n}.
+\end{eqnarray}
+These elements appear in the linear combinations for all elements in the block $\sigma^{(R;n)}_{i,i+n}$.
+The total number of coefficients ahead of these elements equals
+\begin{eqnarray}
+D^{(R)}_{i}D^{(R)}_{i+n} P^{(n)}_{i,i+n}.
+\end{eqnarray}
+the structural restoring of this block requires 
+presence only $D^{(R)}_{i}D^{(R)}_{i+n}$ elements of $\rho^{(S)}$ in this block. Therefore, the number of extra variables is
+\begin{eqnarray}
+Q^{(n)}_{i,i+n} = D^{(R)}_{i}D^{(R)}_{i+n} (P^{(n)}_{i,i+n}-1).
+\end{eqnarray}
+The total number of extra parameters in the $n$-order coherence matrix is
+\begin{eqnarray}
+Q^{(n)} =\sum_{i=1}^{N-n}Q^{(n)}_{i,i+n} .
+\end{eqnarray}
+The total number of extra parameters in all  $n$-order ($n>0$) coherence matrix is
+\begin{eqnarray}\label{Q}
+Q =2\sum_{n=1}^N Q^{(n)} ,
+\end{eqnarray}
+where we take into account that $Q^{(n)}= Q^{(-n)}$. One has to take into account that density matrix is an Hermitian matrix. Therefor, the number of independent complex parameters must be reduced by the factor 2. Therefore eq.(\ref{Q}) gives the number of extra real parameter. 
+
+\subsection{Nondiagonal elements of 0-order coherence matrix}
+
+%The number of extra nondiagonal elements in the blocks $\sigma^{(0)}_{n,n}$ of 0-order coherence matrix reads
+The number of extra elements of $\rho^{(S)}$ in the non-diagonal elements of the block  $\sigma^{(0)}_{n,n}$
+reads
+\begin{eqnarray}
+P^{(0)}_{n,n} = D^{(R)}_{n} (D^{(R)}_{n}-1) /2 + D^{(R)}_{n} =  D^{(R)}_{n} (D^{(R)}{n}+1) /2 
+\end{eqnarray}
+Then the number of extra elements in non-diagonal part of the block  $\sigma^{(0)}_{n,n}$ is
+\begin{eqnarray}
+Q^{(0)}_{n,n} =  D^{(R)}_{n} (D^{(R)}_{n}-1) /2  (P^{(0)}_{n,n}-1). 
+\end{eqnarray}
+\fi
+
+%\newpage
+
+
+\subsubsection{3-qubit state transfer (probbaly to be removed, included into above secs.)}
+Three-qubit sender state:
+\begin{eqnarray}
+\rho^{(S)}(0)= \left(
+\begin{array}{cccc}
+\rho^{(S)}_{11}&0&0&0\cr
+0& \rho^{(S)}_{22} &  \rho^{(S)}_{23} & \rho^{(S)}_{24} \cr
+0& (\rho^{(S)}_{23})^* &  \rho^{(S)}_{33}  &\rho^{(S)}_{34} \cr
+0& (\rho^{(S)}_{24})^* &  (\rho^{(S)}_{34})^*  &\rho^{(S)}_{44} 
+\end{array}
+\right).
+\end{eqnarray}
+We set initially
+\begin{eqnarray}
+ \rho^{(S)}_{24}= \rho^{(S)}_{34}=0,
+\end{eqnarray}
+t.e.
+\begin{eqnarray}\label{insend}
+\rho^{(S)}(0)= \left(
+\begin{array}{cccc}
+\rho^{(S)}_{11}&0&0&0\cr
+0& \rho^{(S)}_{22} &  \rho^{(S)}_{23}  &0 \cr
+0& (\rho^{(S)}_{23})^* &  \rho^{(S)}_{33} & 0\cr
+0& 0 &  0 & \rho^{(S)}_{44} 
+\end{array}
+\right)
+\end{eqnarray}
+The initial state of the whole system reads 
+\begin{eqnarray}\label{inst}
+\rho(0)=\rho^{(S)}(0) \times \rho^{(R;TL)}(0), 
+\end{eqnarray}
+where the initial state of $R\cup TL$ is the ground state:
+\begin{eqnarray}
+\rho^{(R;TL)}(0) =|0_{R,TL}\rangle \langle 0_{R,TL}| ={\mbox{diag}}(1,0,0,\dots).
+\end{eqnarray}
+Next, we apply the evolution operator $V(t)=e^{- iH t}$ to the initial state (\ref{inst}) of the  whole system  and, at some time instant $t_0$,
+the unitary transformation $U(\varphi)$ with the set of free parameters $\varphi=(\varphi_1,\varphi_2,\dots)$
+to the extended receiver:
+\begin{eqnarray}
+\rho(t_0)= (E_{S,\overline{TL}}\otimes U (\varphi))V(t_0) \rho(0) V^+(t_0) (E_{S,\overline{TL}}\otimes U^+ ),
+\end{eqnarray}
+where $\overline{TL}$ is the transmission line without nodes of the extended receiver.  
+Then the state of the receiver reads
+\begin{eqnarray}
+\rho^{(R)}={\mbox{Tr}}_{S,TL} \rho(t)  = \left(
+\begin{array}{cccc}
+\rho^{(R)}_{11}&0&0&0\cr
+0& \rho^{(R)}_{22} &  \rho^{(R)}_{23} & \rho^{(R)}_{24} \cr
+0& (\rho^{(R)}_{23})^* &  \rho^{(R)}_{33}  &\rho^{(R)}_{34} \cr
+0& (\rho^{(R)}_{24})^* &  (\rho^{(R)}_{34})^*  &\rho^{(R)}_{44} 
+\end{array}
+\right),
+\end{eqnarray}
+where $\rho^{(R)}_{ij}$  are linear combination of all  elements $\rho^{(S)}_{ij}(0)$.
+In particular, 
+\begin{eqnarray}\label{syst12}
+ &&\rho^{(R)}_{24}=\sum_{i=1}^4 \alpha^{(24)}_{ii}(\varphi) \rho^{(S)}_{ii} +
+ \alpha^{(24)}_{23}(\varphi) \rho^{(R)}_{23} +  \alpha^{(24)}_{32}(\varphi) (\rho^{(R)}_{23})^*,\\\nonumber
+ &&
+ \rho^{(R)}_{34}=\sum_{i=1}^4 \alpha^{(34)}_{ii}(\varphi) \rho^{(S)}_{ii} +
+ \alpha^{(34)}_{23}(\varphi) \rho^{(R)}_{23} +  \alpha^{(34)}_{32} (\rho^{(R)}_{23})^*(\varphi).
+\end{eqnarray}
+To get the structure of the sender initial state (\ref{insend}) we require
+\begin{eqnarray}\label{zero}
+&&\alpha^{(24)}_{ii}(\varphi)=\alpha^{(34)}_{ii}(\varphi)=0,\;\;i=1,2,3,4, \\\nonumber
+&&\alpha^{(24)}_{23}(\varphi)=
+\alpha^{(24)}_{32}(\varphi)=\alpha^{(34)}_{23}(\varphi)=
+\alpha^{(34)}_{32}(\varphi)=0. 
+\end{eqnarray}
+System (\ref{zero}) contains, in general, 12 complex equations or 24 real equations for the parameters $\varphi$. This 
+prompts us the required dimension of the extended receiver. Since we use only the 1-excitation subspace, then 
+$K$-qubit unitary transformation is $K\times K$ matrix. It contain $K^2-K$ nondiagonal real parameters. 
+Thus, we need $K=6$ (30 nondiagonal real parameters). 
+
+Fixing the parameters $\varphi$, we  solve the following algebraic system for the elements 
+$\rho^{(S)}_{ij}$ of the sender initial state:
+\begin{eqnarray}\label{syst2}
+\rho^{(R)}_{ii} =\rho^{(S)}_{ii}, \;\;i=2,3,\;\;   \rho^{(R)}_{23} = \rho^{(S)}_{23},\;\;
+\rho^{(R)}_{11} =\rho^{(S)}_{44}.
+\end{eqnarray}
+The found elements $\rho^{(S)}_{ij}$ compose   desired initial state (\ref{insend}) which perfectly (up to the exchange 
+$\rho^{(S)}_{11} \leftrightarrow \rho^{(S)}_{44}$) transfers to the receiver at certain time instant $t_0$.
+
+%\section{Transfer of arbitrary parameters}
+%We can consider the system (\ref{syst1}), (\ref{syst2}) as a system of equations %for the parameters $\varphi$ and $\rho^{(S)}_{ij}$ and try to find such constant %parameters $\varphi$, that some of  $\rho^{(S)}_{ij}$ remain free.
+
+\iffalse
+\newpage
+
+\section{Information transfer by nondiagonal elements of zero-order coherence matrix}
+
+
+
+We consider the communication line consisting of the sender $S$, where the state to be transferred is initiated, the transmission line $TL$, which transfers the state from the sender to the receiver,
+and the receiver $R$, where the transferred state is registered, as shown in  Fig.\ref{Fig:rec}. 
+
+\iffalse
+\begin{figure*}[!]
+\epsfig{file=fig1,%communication2018optO.eps,%ScalarProd14.eps ,
+  scale=0.6
+   ,angle=0%270
+} 
+\caption{Communication line consisting of sender S, transmission line TL and receiver R. 
+The extended receiver ER is drown as a box which includes  receiver R and several nearest nodes.  
+%In this figure, both $S$ and $R$ are 2-qubit, while $ER$ is
+%a 4-qubit subsystems. 
+%state transfer with recovering the structure of the elements of the non-zero-order coherence %matrices. % $N=10$, $\delta_1 = 030 \delta$, $
+%\delta_2 = 0. 531\delta$, $t_0=58 . 987$
+}
+  \label{Fig:rec} 
+\end{figure*}
+\fi
+In addition, we consider an extended receiver $ER$ \cite{Z_2018}, which is  to handle the state of the receiver in a desired manner via the unitary transformation. The receiver is included into the extended receiver. We  consider the sender and receiver of the same dimension:
+${\mbox{dim}}\, S = {\mbox{dim}}\,R$.
+
+To prevent mixing the elements of different order coherence matrices during  evolution
+ \begin{eqnarray}\label{erv}
+ \rho(t) = V(t) \rho(0) V^+(t),\;\;V(t)=e^{-i H t},
+\end{eqnarray}
+we require that the Hamiltonian $H$ conserves the excitation number in the system, i.e., it satisfies (\ref{com}), and the initial state $\rho(0)$ has the tensor-product form
+\begin{eqnarray}\label{incon}
+\rho(0)=\rho^{(S)}(0)\otimes \rho^{(TL,R)}(0).
+\end{eqnarray}
+Here $\rho^{(S)}(0)$ is the sender's density matrix whose structure will be discussed below, and  $\rho^{(TL,R)}(0)$ is the initial state of the subsystem $TL\cup R$. It is important that    $\rho^{(TL,R)}(0)$ {must}  include only the 0-order coherence matrix. Namely this condition together with the commutation condition (\ref{com}) provides  transfer  of a quantum state  from the sender to the receiver without interaction among multi-quantum  coherence matrices  \cite{FZ_2017}. 
+\fi
+
+\iffalse
+At some time instant $t_0$, we apply the unitary transformation $U$, which depends on the set of free parameters $\varphi$, to the extended receiver. This transformation is required to conserve the excitation number, i.e.,  
+\begin{eqnarray}\label{st}
+[I^{ER}_z,U]=0,
+\end{eqnarray}
+where $I^{ER}_z$ is the $z$-projection of the total spin moment in the state-space of the extended receiver $ER$.
+Then the state of the system becomes
+\begin{eqnarray}\label{rtv}
+\rho(t_0,\varphi)=W(t_0,\varphi) \rho(0) W^+(t_0,\varphi),
+\end{eqnarray}
+where
+\begin{eqnarray}
+W(t_0,\varphi)=(E_{S,\overline{TL}}\otimes U) V(t_0),
+\end{eqnarray}
+$E_{S,\overline{TL}}$ is the identity operator in the subspace of the subsystem $S\cup \overline{TL}$, $\overline{TL}$ is the transmission line without nodes of the extended receiver. {Notice that the dynamics of the initial state (\ref{incon}) with $N^{(S)}$-qubit sender can be described in the subspace of up to $N^{(S)}$ excitations due to the commutation relation $[W,I_z]=0$, which follows from (\ref{com}) and (\ref{st}). Therefore the operator
+ $W$ has the following  block-diagonal form:}
+\begin{eqnarray}\label{W}
+W={\mbox{diag}}(W^{(0)}, W^{(1)},W^{(2)},\dots,W^{(N^{(S)})}),
+\end{eqnarray}
+where $W^{(i)}$ is  the block in the subspace of $i$ exited spins, 
+$i=0,\dots, N^{(S)}$. We put  $W^{(0)}=1$ without loss of generality. 
+Similarly, $U$ has the following block-diagonal form:
+\begin{eqnarray}\label{U}
+&&
+U(\varphi)={\mbox{diag}}(1, U^{(1)}(\varphi^{(1)}),U^{(2)}(\varphi^{(2)}),\dots,U^{(N^{(S)})}(\varphi^{(N^{(S)})})),\\\nonumber
+&&
+\varphi=(\varphi^{(1)},\varphi^{(2)},\dots,\varphi^{(N^{(S)})}).
+\end{eqnarray}
+%where $N^{(ER)}$ is the number of qubits in the extended receiver. 
+The dimension of the $k$th block,
+\begin{eqnarray}\label{UC}
+C^{(k)}_{N^{(S)}} \times C^{(k)}_{N^{(S)}},\;\;C^{(k)}_{N^{(S)}} =\frac{N^{(S)}!}{k! (N^{(S)}-k)!},
+\end{eqnarray}
+defines the number of free real parameters  in the block $U^{(k)}$:
+\begin{eqnarray}\label{Uvarphi}
+\varphi^{(k)} = (\varphi^{(k)}_1,\dots,\varphi^{(k)}_{C^{(k)}_{N^{(S)}}(C^{(k)}_{N^{(S)}}-1)}).
+\end{eqnarray}
+The state of the receiver at the time instant $t_0$ can be found from $\rho(t_0,\varphi)$ by tracing over $S$ and $TL$:  
+\begin{eqnarray}\label{RTr}
+\rho^{(R)}(t_0,\varphi)={\mbox{Tr}}_{S,TL}(\rho(t_0,\varphi)).
+\end{eqnarray}
+Hereafter we omit the parameters $t_0$ and $\varphi$ from the list of arguments.
+
+\subsection{Structure of eq. (\ref{rtv})}
+Now we proceed to study the structure of eq. (\ref{rtv}).
+Before writing this equation in components we introduce the multi-indexes for the subsystems $S$, $TL$ and $R$, which we denote by the capital latin letters with the corresponding  subscripts. The multi-index is the set of zeros and units, the length of this set equals the number of qubits in the subsystem. The number 1 at a certain position means that the corresponding spin is excited, the number 0 means that the spin is in the ground state. For instance, $I_S$ is the multi-index linked to the sender  $S$. 
+We also introduce the norm of the multi-index $|\cdot|$, which is the number of excited spins in the subsystem (and equals to the sum of all elements in this multi-index). 
+%The capital latin letter without index means the set of indexes of all subsystems, for instance, 
+%\begin{eqnarray}
+%I=\{I_S,I_{TL},I_R\}.
+%\end{eqnarray}
+We also use the notation of indexed 1 and 0 to indicate the indexes with all units or zeros. Since 
+${\mbox{dim}}\,S ={\mbox{dim}}\,R$, then the multiindexes with subscripts $R$ and $S$ are of equal length, in particular,  $1_R = 1_S$, $0_R=0_S$.
+In these terms, the scalar blocks $W^{(0)}$ and $ W^{(N)}$ of the unitary transformation $W$ given by Eq. (\ref{W}) read as:
+\begin{eqnarray}
+W^{(0)}=W^{(0)}_{0_S0_{TL}0_R;0_S0_{TL}0_R} =1,\;\;W^{(N)} = W^{(N)}_{1_S1_{TL}1_R;1_S1_{TL}1_R}.
+\end{eqnarray}
+In general, for the elements of $n$th block $
+W^{(n)}_{I_SI_{TL}I_R;J_SJ_{TL}J_R} 
+$ we have 
+\begin{eqnarray}\label{ststst}
+|I_S|+|I_{TL}|+|I_R|=|J_S|+|J_{TL}|+|J_R|=n.
+\end{eqnarray}
+Now the density matrix $\rho(t_0,\varphi)$ (\ref{rtv}) can be written in the following component form:
+%(hereafter we omit the parameter $t_0$ from the list of arguments):
+%using the multi-indexes introduced in Sec. \ref{Section:rho}:
+\begin{eqnarray}\label{rhoNM}
+\rho_{N_SN_{TL}N_R;M_SM_{TL}M_R} = \sum_{I_S,J_S} W^{(|I_S|)}_{N_SN_{TL}N_R;I_S 0_{TL} 0_R}  \rho^{(S)}_{I_S,J_S} 
+(W^{(|J_S|)})^+_{J_S 0_{TL} 0_R;M_SM_{TL}M_R} .
+\end{eqnarray}
+
+\subsection{Structure of receiver's state  (\ref{RTr})}
+
+After tracing over  $S$ and $TL$ we obtain the receiver's density matrix $\rho^{(R)}$:
+\begin{eqnarray}\label{rhoNMR0}\label{rhoNMR}
+\rho^{(R)}_{N_R,M_R} &=& \sum_{{N_S,N_{TL}}\atop{|N_S|+|N_{TL}|=|I_S|-|N_R|}} \sum_{I_S,J_S}
+W^{(|I_S|)}_{N_SN_{TL}N_R;I_S 0_{TL} 0_R}  \rho^{(S)}_{I_S,J_S} 
+(W^{(|J_S|)})^+_{J_S 0_{TL} 0_R;N_SN_{TL}M_R}.
+\end{eqnarray}
+
+This means that the elements of  the $n$-order coherence matrix of the sender 
+become the elements of  the $n$-order coherence matrix of the receiver. In other words, 
+system  (\ref{rhoNMR}) is equivalent to the following:
+\begin{eqnarray}\label{rhoNMRf}
+&&
+\rho^{(R;n)}_{N_R,M_R}  =\\\nonumber
+&&\sum_{{N_S,N_{TL}}\atop{|N_S|+|N_{TL}|=|I_S|-|N_R|}}
+\sum_{I_S,J_S}
+W^{(I_S)}_{N_SN_{TL}N_R;I_S 0_{TL} 0_R}   \rho^{(S;n)}_{I_S,J_S}
+(W^{(J_S)})^+_{J_S 0_{TL} 0_R;N_SN_{TL}M_R}
+, \\\nonumber
+&&
+-N\le n \le N.
+\end{eqnarray}
+%\begin{eqnarray}\label{T2}
+%T^{(n)}_{N_RM_R;I_SJ_S} \equiv T^{(|J_S|-|I_S|)}_{N_RM_R;I_SJ_S}  =\sum_{N_S,N_{TL}}
+%W^{(I_S)}_{N_SN_{TL}N_R;I_S 0_{TL} 0_R}  
+%(W^{(J_S)})^+_{J_S 0_{TL} 0_R;N_SN_{TL}M_R}.
+%\end{eqnarray}
+
+
+Now we consider the structure of the  multi-quantum coherence matrices of positive order.
+%  starting with the highest order. 
+The coherence matrices of negative order are Hermitian conjugate of {these matrices}.
+%the coherence matrices of  positive order. 
+
+
+\subsubsection{0-order coherence matrix}
+\label{Section:zer0}
+For 0-order coherence matrix we have in (\ref{rhoNMR0}):
+\begin{eqnarray}
+|N_R|=|M_R|,\;\; |I_S|=|J_S|.
+\end{eqnarray}
+Then the matrix elements have the following representation:
+\begin{eqnarray}\label{rhoNMR02}\label{rhoNMR0c}
+&&
+\rho^{(R;0)}_{N_R,M_R} = \\\nonumber
+&&\sum_{{N_S,N_{TL}}\atop{|N_S|+|N_{TL}|=|I_S|-|N_R|}}
+\sum_{{I_S,J_S}\atop{|I_S|=|J_S|\ge |N_R|}}
+W^{(|I_S|)}_{N_SN_{TL}N_R;I_S 0_{TL} 0_R}  \rho^{(S;0)}_{I_S,J_S} 
+(W^{(|J_S|)})^+_{J_S 0_{TL} 0_R;N_SN_{TL}M_R} .
+\end{eqnarray}
+To check the normalization condition, we set $M_R=N_R$ and calculate the sum of  eqs.(\ref{rhoNMR02}) over $N_R$ to obtain:
+\begin{eqnarray}\label{norm}
+\sum_{N_R}\rho^{(R;0)}_{N_R,N_R}=\sum_{I_S} \rho^{(S;0)}_{I_S,I_S} =1.
+\end{eqnarray}
+
+
+We consider the structure of Eq.(\ref{rhoNMR02}) for two particular cases. First, 
+let $|N_R|=|M_R|=N$. This is possible only if $N_R=M_R=1_R$. Then (\ref{rhoNMR02}) yields
+\begin{eqnarray}\label{rhoNMR0a}
+\rho^{(R;0)}_{1_R,1_R} &=& 
+W^{(N)}_{0_S 0_{TL}1_R;1_S 0_{TL} 0_R}  \rho^{(S;0)}_{1_S,1_S} 
+(W^{(N)})^+_{1_S 0_{TL} 0_R;0_S 0_{TL}1_R}=\\\nonumber
+&&
+|W^{(N)}_{0_S 0_{TL}1_R;1_S 0_{TL} 0_R}|^2  \rho^{(S;0)}_{1_S,1_S} ,
+\end{eqnarray}
+i.e., the element $\rho^{(R;0)}_{1_R,1_R}$ is proportional to $\rho^{(S;0)}_{1_S,1_S}$.
+
+\iffalse
+Let $|N_R|=|M_R|=N-1$. 
+Then we have
+\begin{eqnarray}\label{rhoNMR0b}
+&&
+\rho^{(R;0)}_{N_R,M_R} = \sum_{{I_S,J_S}\atop{|I_S|=|J_S|=N-1}}
+W^{(N-1)}_{0_S 0_{TL}N_R;I_S 0_{TL} 0_R}  \rho^{(S;0)}_{I_S,J_S} 
+(W^{(N-1)})^+_{J_S 0_{TL} 0_R;0_S 0_{TL}M_R}  +\\\nonumber
+&&\sum_{|N_S|+|N_{TL}|=1}
+W^{(N)}_{N_SN_{TL}N_R;1_S 0_{TL} 0_R}  \rho^{(S;0)}_{1_S,1_S} 
+(W^{(N)})^+_{1_S 0_{TL} 0_R;N_SN_{TL}M_R} .
+\end{eqnarray}
+\fi
+\iffalse
+Let $0<|N_R|=|M_R|<N$. Then eq.(\ref{rhoNMR02}) yields
+\begin{eqnarray}\label{rhoNMR0c}
+%\label{rhoNMR0cC}
+&&\rho^{(R;0)}_{N_R,M_R} =\\\nonumber
+&&\sum_{{N_S,N_{TL}}\atop{|N_S|+|N_{TL}|=|I_S|-|N_R|}}
+\sum_{{I_S,J_S}\atop{|I_S|=|J_S|\ge |N_R|}}
+W^{(|I_S|)}_{N_SN_{TL}N_R;I_S 0_{TL} 0_R}  \rho^{(S;0)}_{I_S,J_S} 
+(W^{(|J_S|)})^+_{J_S 0_{TL} 0_R;N_SN_{TL}M_R}.
+\end{eqnarray}
+\fi
+Second, if $|N_R|=|M_R|=0$, then $N_R=M_R=0_R$ so that eq.(\ref{rhoNMR0c}) yields
+\begin{eqnarray}\label{rhoNMR0d}
+%\label{rhoNMR0dC}
+&&\rho^{(R;0)}_{0_R,0_R} =
+\\\nonumber
+&&\sum_{{N_S,N_{TL}}\atop{|N_S|+|N_{TL}|=|I_S|-|N_R|}}
+\sum_{{I_S,J_S}\atop{0\le|I_S|=|J_S|\le N}}
+W^{(|I_S|)}_{N_SN_{TL}0_R;I_S 0_{TL} 0_R}  \rho^{(S;0)}_{I_S,J_S} 
+(W^{(|J_S|)})^+_{J_S 0_{TL} 0_R;N_S N_{TL}0_R} .
+\end{eqnarray}
+
+{\bf Remark.} If all elements of $\rho^{(S;0)}$ equal to zero except the single one 
+$\rho^{(S;0)}_{0_S,0_S}=1$, i.e.,
+\begin{eqnarray}\label{rho00}
+\rho^{(S;0)}_{N_SM_S} = \delta_{N_S,0_S} \delta_{M_S,0_S},  
+\end{eqnarray}
+where $\delta$ is the Kronecker symbol,
+then system (\ref{rhoNMR02}) reduces to 
+ the following one
+\begin{eqnarray}\label{rhoNMR03}
+\rho^{(R;0)}_{N_R,M_R} &=& 
+%\sum_{N_S,N_{TL}}
+%W^{(0)}_{N_SN_{TL}N_R;0_S 0_{TL} 0_R}  \rho^{(S;0)}_{0_S,0_S} 
+%(W^{(0)})^+_{0_S 0_{TL} 0_R;N_SN_{TL}M_R}  =
+\\\nonumber
+&&
+W^{(0)}_{0_S0_{TL}N_R;0_S 0_{TL} 0_R}  \rho^{(S;0)}_{0_S,0_S} 
+(W^{(0)})^+_{0_S 0_{TL} 0_R;0_S0_{TL}M_R} = \delta_{N_R, 0_R}\delta_{M_R,0_R}\rho^{(S;0)}_{0_R,0_R} ,
+\end{eqnarray}
+where we take into account that $W_{0_S0_{TL}0_R;0_S 0_{TL} 0_R}\equiv 1$.
+Thus, if the 0-order coherence matrix of the sender's initial state is 
+\begin{eqnarray}\label{rhosd}
+\rho^{(S;0)}={\mbox{diag}} (1,0,\dots,0),
+\end{eqnarray}
+then this matrix is transfered to the state of the receiver without any change, so that 
+$\rho^{(R;0)} \equiv \rho^{(S;0)} \equiv {\mbox{diag}} (1,0,\dots,0)$.
+However, any correction to  (\ref{rhosd}) destroys the positivity  of the density matrix, therefore it  can not be used as a 0-order coherence matrix of the sender's initial state for the purpose of  transferring the  higher order coherence matrices to the receiver.
+ 
+%We use this property of the 0-order coherence matrix  in Sec.\ref{Section:state_restoring}. 
+
+
+
+
+\subsection{Construction of 0-order coherence matrix}
+\subsubsection{Elements which can be perfectly transferred and normalization condition}
+\label{Section:0orderNorm}
+In this section we find structure of the 0-order coherence matrix, which can be either nearly perfectly transferred (up to two elements included into blocks of zero number of excitations and maximal number of excitations) or perfectly transferred.
+
+First of all we have to take into account constraints %(\ref{N1constr3}), (\ref{N1constr1}), (\ref{N1constr2}), 
+(\ref{kconstr1}) and (\ref{kconstr2}) %, (\ref{1T1}) and (\ref{1cohconstr22}) 
+obtained in restoring the higher order coherence matrices.
+Eq.(\ref{rhoNMR0a}) for  $|N_R|=|M_R|=N$ remains the same. 
+\iffalse
+Eq. (\ref{rhoNMR0b}) for $|N_R|=|M_R|=N-1$ reads ($N_R=N_S$, $M_R=M_S$)
+\begin{eqnarray}\label{rhoNMR0bC}
+&&
+\rho^{(R;0)}_{N_R,M_R} = 
+W^{(N-1)}_{0_S 0_{TL}N_R;N_R 0_{TL} 0_R}  \rho^{(S;0)}_{N_R,M_R} 
+(W^{(N-1)})^+_{M_R 0_{TL} 0_R;0_S 0_{TL}M_R}  +\\\nonumber
+&&\sum_{|N_S|+|N_{TL}|=1}
+W^{(N)}_{N_SN_{TL}N_R;1_S 0_{TL} 0_R}  \rho^{(S;0)}_{1_S,1_S} 
+(W^{(N)})^+_{1_S 0_{TL} 0_R;N_SN_{TL}M_R} .
+\end{eqnarray}
+\fi
+Eq.(\ref{rhoNMR0c}) for 
+ $0<|N_R|=|M_R|<N$ yields
+% and  Eq.(\ref{rhoNMR0d})  for $|N_R|=|M_R|=0$ remain the same. 
+\begin{eqnarray}\label{rhoNMR0cC}
+&&\rho^{(R;0)}_{N_R,M_R} =\\\nonumber
+&&
+W^{(|N_R|)}_{0_S0_{TL}N_R;N_R 0_{TL} 0_R}  \rho^{(S;0)}_{N_R,M_R} 
+(W^{(|M_R|)})^+_{M_R 0_{TL} 0_R;0_S0_{TL}M_R}+\\\nonumber
+&&\sum_{{N_S,N_{TL}}\atop{|N_S|+|N_{TL}|=|I_S|-|N_R|}}
+\sum_{{I_S,J_S}\atop{|N_R|<|I_S|=|J_S|<N}}
+W^{(|I_S|)}_{N_SN_{TL}N_R;I_S 0_{TL} 0_R}  \rho^{(S;0)}_{I_S,J_S} 
+(W^{(|J_S|)})^+_{J_S 0_{TL} 0_R;N_SN_{TL}M_R}+\\\nonumber
+&&\sum_{{N_S,N_{TL}}\atop{|N_S|+|N_{TL}| = N-|N_R|}}
+W^{(N)}_{N_SN_{TL}N_R;1_R 0_{TL} 0_R}  \rho^{(S;0)}_{1_R,1_R} 
+(W^{(N)})^+_{1_R 0_{TL} 0_R;N_SN_{TL}M_R}
+\end{eqnarray}
+Finally, eq.(\ref{rhoNMR0d})  for $|N_R|=|M_R|=0$ reads
+\begin{eqnarray}\label{rhoNMR0dC}
+&&\rho^{(R;0)}_{0_R,0_R} =\rho^{(S;0)}_{0_R,0_R} +
+\\\nonumber
+&&
+\sum_{{N_S,N_{TL}}\atop{|N_S|+|N_{TL}| = |I_S|}}
+\sum_{{I_S,J_S}\atop{0<|I_S|=|J_S|<N}}
+W^{(|I_S|)}_{N_SN_{TL}0_R;I_S 0_{TL} 0_R}  \rho^{(S;0)}_{I_S,J_S} 
+(W^{(|J_S|)})^+_{J_S 0_{TL} 0_R;N_S N_{TL}0_R} +
+\\\nonumber
+&&
+\sum_{{N_S,N_{TL}}\atop{|N_S|+|N_{TL}|=N}}
+|W^{(N)}_{N_SN_{TL}0_R;1_R 0_{TL} 0_R} |^2 \rho^{(S;0)}_{1_R,1_R} 
+.
+\end{eqnarray}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%As was pointed in \cite{Z_2018}, restoring  the diagonal elements  encounters %obstacles.
+%However,
+ Now we look for such elements which can be perfectly transferred to the receiver.
+For the element $\rho^{(R;0)}_{1_R,1_R}$ given in (\ref{rhoNMR0a})  this requirement $\rho^{(R;0)}_{1_R,1_R}=\rho^{(S;0)}_{1_R,1_R}$ may not be satisfied for nonzero $\rho^{(S;0)}_{1_R,1_R}$, because $|W^{(N)}_{0_S 0_{TL}1_R;1_S 0_{TL} 0_R}| < 1 $. Therefore this element can not be perfectly transferred. There must be at least one more non-perfectly transferred diagonal element to provide the normalization.   Let $\rho^{(S;0)}_{0_R,0_R}$ be such element. 
+%\begin{eqnarray}
+%\rho^{(S;0)}_{1_R,1_R} = |W^{(N)}_{0_S0_{TL} 1_R;1_S0_{TL}0_R}|^2 \rho^{(S;0)}_{1_S,1_S}.
+%\end{eqnarray}
+%Thus either 
+%\begin{eqnarray}\label{zero1}
+%&&
+%|W^{(N)}_{1_S0_{TL} 0_R;1_S0_{TL}0_R}|=1\;\; {\mbox{or}}\\\label{zero2}
+%&&
+%\rho^{(S;0)}_{1_S,1_S}=0.  
+%\end{eqnarray}
+%Condition (\ref{zero1}) can not be satisfied in a long  homogeneous chain because this is the probability of the state transfer from the first to the last %node (corrected by the unitary transformation of the extended receiver). Therefore eq.(\ref{zero2}) must hold. 
+
+The perfect transfer of the elements $\rho^{(S;0)}_{N_R;M_R}$, $0<|N_R|=|M_R|<N$, can be arranged by 
+%Eq.(\ref{rhoNMR0bC}) and 
+eq.(\ref{rhoNMR0cC}). 
+Setting 
+$\rho^{(R;0)}_{N_R;M_R}=\rho^{(S;0)}_{N_R;M_R}$ in this system we obtain the following equation for $\rho^{(S;0)}_{N_R,M_R}$:
+\begin{eqnarray}\label{rhoNMR0bz}
+&&\rho^{(R;0)}_{N_R,M_R} =\rho^{(S;0)}_{N_R,M_R} =\\\nonumber
+&&
+W^{(|N_R|)}_{0_S0_{TL}N_R;N_R 0_{TL} 0_R}  \rho^{(S;0)}_{N_R,M_R} 
+(W^{(|M_R|)})^+_{M_R 0_{TL} 0_R;0_S0_{TL}M_R}+\\\nonumber
+&&\sum_{{N_S,N_{TL}}\atop{|N_S|+|N_{TL}|=|I_S|-|N_R|}}
+\sum_{{I_S,J_S}\atop{|N_R|<|I_S|=|J_S|< N}}
+W^{(|I_S|)}_{N_SN_{TL}N_R;I_S 0_{TL} 0_R}  \rho^{(S;0)}_{I_S,J_S} 
+(W^{(|J_S|)})^+_{J_S 0_{TL} 0_R;N_SN_{TL}M_R}+\\\nonumber
+&&
+\sum_{{N_S,N_{TL}}\atop{|N_S|+|N_{TL}| = N-|N_R|}}
+W^{(N)}_{N_SN_{TL}N_R;1_R 0_{TL} 0_R}  \rho^{(S;0)}_{1_R,1_R} 
+(W^{(N)})^+_{1_R 0_{TL} 0_R;N_SN_{TL}M_R}
+,\\\nonumber
+&&
+0<|N_R|=|M_R|<N.
+\end{eqnarray}
+\iffalse
+Thus, either 
+\begin{eqnarray}\label{zero3}
+&&W^{(N-1)}_{0_S 0_{TL}N_R;N_R 0_{TL} 0_R} 
+(W^{(N-1)})^+_{M_R 0_{TL} 0_R;0_S 0_{TL}M_R}=1\;\;{\mbox{or}}\\\label{zero4}
+&& \rho^{(S;0)}_{N_R,M_R} =0,\;\;|M_R|=|N_R|=N-1.
+\end{eqnarray}
+Again, since lhs of (\ref{zero3}) is a product of the probability amplitude of state transfer, 
+it may not be satisfied in a long homogeneous chain. Therefore we take (\ref{zero4}).
+
+We can continue this process decreasing $|N_R|=|M_R|=k$, $k=N-2,\;N-3,\dots$,  each time selecting the condition
+\begin{eqnarray}\label{zero9}
+\rho^{(S;0)}_{N_R,M_R} =0,\;\;|M_R|=|N_R|=k
+\end{eqnarray}
+Then for   $|N_R|=|M_R|=k+1$
+eq.(\ref{rhoNMR0cC}) ($n=k+1$) in view of  (\ref{zero2}), (\ref{zero4}) and (\ref{zero9}) yields 
+\begin{eqnarray}\label{rhoNMR0c2}
+&&\rho^{(S;0)}_{N_S,M_S} =\\\nonumber
+&&
+W^{(|N_S|)}_{0_S0_{TL}N_S;N_S 0_{TL} 0_S}  \rho^{(S;0)}_{N_S,M_S} 
+(W^{(|M_S|)})^+_{M_S 0_{TL} 0_S;0_S0_{TL}M_S}
+\end{eqnarray}
+Thus either
+\begin{eqnarray}\label{zero5}
+&&
+W^{(|N_S|)}_{0_S0_{TL}N_S;N_S 0_{TL} 0_S}  
+(W^{(|M_S|)})^+_{M_S 0_{TL} 0_S;0_S0_{TL}M_S}=1, \;\;{\mbox{or}}\\\label{zero6}
+&&
+\rho^{(S;0)}_{N_S,M_S} =0.
+\end{eqnarray}
+Condition (\ref{zero5}) is expressed in terms of the probability amplitudes  of state transfer and therefore it may not be satisfied in the homogeneous chain. Therefore we must consider (\ref{zero6}). 
+\fi
+%Finally, 
+%the requirement of the perfect transfer for the element $\rho^{(S;0)}_{0_R,0_R}$ %yields $\rho^{(S;0)}_{0_R,0_R}=1$, which is impossible for the nonzero other 
+%elements of the density matrix $\rho^{(S)}(0)$. 
+Thus, among the elements of the 0-order coherence matrix, there are only two elements which can not be perfectly transferred, $\rho^{(S;0)}_{0_R,0_R}$ and 
+$\rho^{(S;0)}_{1_R,1_R}$, with the normalization
+$\sum_{N_R}\rho^{(R;0)}_{N_R,N_R}=1$ which is equivalent to
+\begin{eqnarray}\label{SR}
+\rho^{(S;0)}_{0_R,0_R}+\rho^{(S;0)}_{1_R,1_R}= \rho^{(R;0)}_{0_R,0_R}+\rho^{(R;0)}_{1_R,1_R}.
+\end{eqnarray}
+
+{
+However, there is a way to overcome this obstacle for the perfect transfer of all elements of the 0-order coherence matrix.
+First, we  require 
+\begin{eqnarray}\label{SR1}
+\rho^{(R;N)}_{1_R,1_R} = \rho^{(S;0)}_{0_R,0_R}.
+\end{eqnarray}
+Then eq.(\ref{SR}) yelds
+\begin{eqnarray}\label{SR2}
+\rho^{(R;0)}_{0_R,0_R} = \rho^{(S;N)}_{1_R,1_R}.
+\end{eqnarray}
+After that we apply the unitary transformation to the receiver (not to the extended receiver) which exchanges the first and last rows (as well as the first and last columns) of the density matrix. Of course, this transformation does not commute with the $z$-projection  of the total spin moment, and therefore it exchanges some elements between 
+$n$- and $-n$-order coherence matrices. 
+This problem does not appears if those rows and columns are zero, i.e., the sender's initial density matrix has the following block-diagonal form:
+\begin{eqnarray}\label{Block}
+\rho^{(S)}(0)=\left(
+\begin{array}{c|c|c}
+\rho^{(S;0)}_{0_S,0_S} & 0_{2^N-2} &0\cr
+\hline
+0_{2^N-2}^T & {\mbox{{\Large{$\tilde \rho^{(S)}$}}}}& 0_{2^N-2}^T\cr
+\hline
+0&0_{2^N-2} &\rho^{(S;0)}_{1_S,1_S}
+\end{array}
+\right),
+\end{eqnarray}
+where $0_{2^N-2}$ and $0^T_{2^N-2}$  are, respectively,  the row and column of $2^N-2$ zeros, and $\tilde \rho^{(S)}$ collects elements of the density matrix in the subspace of states with 1, 2, $\dots$, $N-1$ excitations.
+Otherwise, if $\rho^{(S)}(0)$ is a full matrix, we still can restore the structure of the higher-order coherence matrices applying to the  extended receiver a  unitary transformation which is able to combine the elements of $\pm n$-order coherence matrices with fixed $n$. 
+Such transformation doesn't satisfy commutation condition  (\ref{st}) and 
+we leave this problem beyond the scope of our paper.
+}
+
+
+{
+\subsubsection{Restoring  nondiagonal  elements of 0-order coherence matrix}
+\label{Section:0orderRestoring}
+Along with the elements of the  higher order  coherence matrix, the nondiagonal elements of 0-order coherence matrix can also be restored, as was shown in \cite{Z_2018} for the two-qubit state. The nondiagonal elements are described by eq.(\ref{rhoNMR0cC})  with $N_R\neq M_R$. Restoring these elements reduces to the 
+definition of $\lambda^{(0)}_{N_R,M_R}$,
+\begin{eqnarray}\label{lam0}
+\lambda^{(0)}_{N_R,M_R}=
+W^{(|N_R|)}_{0_S0_{TL}N_R;N_R 0_{TL} 0_R} (W^{(|N_R|)})^+_{M_R0_{TL}0_R;0_S 0_{TL} M_R}, \;\;N_R\neq M_R
+\end{eqnarray}
+and set of constraints for the parameters $\varphi$:
+\begin{eqnarray}\label{lam02}
+&&\sum_{{N_S,N_{TL}}\atop{|N_S|+|N_{TL}|=|I_S|-|N_R|}}W^{(|I_S|)}_{N_SN_{TL}N_R;I_S 0_{TL} 0_R} 
+(W^{(|J_S|)})^+_{J_S 0_{TL} 0_R;N_SN_{TL}M_R}=0,
+\\\nonumber
+&&
+|N_R|=|M_R|<|I_S|=|J_S|<N,
+\\\label{lam03}
+&&\sum_{{N_S,N_{TL}}\atop{|N_S|+|N_{TL}| = N-|N_R|}}
+W^{(N)}_{N_SN_{TL}N_R;1_R 0_{TL} 0_R}  
+(W^{(N)})^+_{1_R 0_{TL} 0_R;N_SN_{TL}M_R}=0,\\\nonumber
+&&
+|N_R|=|M_R|
+\end{eqnarray}
+{
+where at least one of conditions  $M_R\neq N_R$ or $I_S\neq J_S$ holds. These constraints eliminate nondiagonal elements $\rho^{(S;0)}_{I_S,J_S}$ ($I_S\neq J_S$) from the rhs of eqs.(\ref{rhoNMR0cC})  with $N_R=M_R$ and remove extra terms from eqs.(\ref{rhoNMR0cC})  with $N_R\neq M_R$ to provide eq.(\ref{lam0}).
+After that, the diagonal part of system (\ref{rhoNMR0cC}) with $M_R=N_R$ reads
+\begin{eqnarray}\label{rhoNMR0cC2}
+&&\rho^{(R;0)}_{N_R,N_R} =\\\nonumber
+&&
+|W^{(|N_R|)}_{0_S0_{TL}N_R;N_R 0_{TL} 0_R}|^2  \rho^{(S;0)}_{N_R,N_R} 
++\\\nonumber
+&&\sum_{{N_S,N_{TL}}\atop{|N_S|+|N_{TL}|=|I_S|-|N_R|}}
+\sum_{{I_S}\atop{|N_R|<|I_S|<N}}
+|W^{(|I_S|)}_{N_SN_{TL}N_R;I_S 0_{TL} 0_R}|^2  \rho^{(S;0)}_{I_S,I_S} +\\\nonumber
+&&\sum_{{N_S,N_{TL}}\atop{|N_S|+|N_{TL}| = N-|N_R|}}
+|W^{(N)}_{N_SN_{TL}N_R;1_R 0_{TL} 0_R}|^2  \rho^{(S;0)}_{1_R,1_R}. 
+\end{eqnarray}
+}
+We also have to eliminate nondiagonal elements from (\ref{rhoNMR0dC}), imposing one more constraint for $\varphi$:
+\begin{eqnarray}\label{lam04}
+&&\sum_{{N_S,N_{TL}}\atop{|N_S|+|N_{TL}|=|I_S|}}
+W^{(|I_S|)}_{N_SN_{TL}0_R;I_S 0_{TL} 0_R}  
+(W^{(|J_S|)})^+_{J_S 0_{TL} 0_R;N_S N_{TL}0_R} =0, \\\nonumber
+&&I_S\neq J_S,\;\;0<|I_S|=|J_S|<N.
+\end{eqnarray}
+Then eq.(\ref{rhoNMR0dC}) reduces to
+\begin{eqnarray}\label{rhoNMR0dC2}
+&&\rho^{(R;0)}_{0_R,0_R} =\rho^{(S;0)}_{0_R,0_R} +
+\\\nonumber
+&&
+\sum_{{N_S,N_{TL}}\atop{|N_S|+|N_{TL}|=|I_S|}}
+\sum_{{I_S}\atop{0<|I_S|<N}}
+W^{(|I_S|)}_{N_SN_{TL}0_R;I_S 0_{TL} 0_R}  \rho^{(S;0)}_{I_S,I_S} 
+(W^{(|I_S|)})^+_{I_S 0_{TL} 0_R;N_S N_{TL}0_R} +
+\\\nonumber
+&&
+\sum_{{N_S,N_{TL}}\atop{|N_S|+|N_{TL}| = N}}
+|W^{(N)}_{N_SN_{TL}0_R;1_R 0_{TL} 0_R} |^2 \rho^{(S;0)}_{1_R,1_R} 
+.
+\end{eqnarray}
+
+Now only diagonal elements of $\rho^{(R;0)}$, described by (\ref{rhoNMR0cC2}), can satisfy the condition of perfect transfer given by eq.(\ref{rhoNMR0bz}) with $M_R=N_R$.  
+
+Thus, equations (\ref{lam02})  - (\ref{lam04}) are added to eqs. (\ref{kconstr1}) and (\ref{kconstr2})  in constructing the optimizing unitary transformation of the extended receiver $U_{opt}$.
+}{Constraint (\ref{SR1}) is also applicable in this case.} 
+
+
+
+\section{Example: 2-qubit state propagation}
+\label{Section:example}
+
+\subsection{General analysis}
+%\subsubsection{Restoring  1- and 2-order coherence matrices}
+In this section  we consider an example of two-qubit state restoring. 
+In this case $N=2$ and there are three multi-quantum coherence matrices to be considered.
+Restoring of the non-diagonal part of the 2-qubit transferred matrix was proposed in Ref.\cite{Z_2018}. { Here we, first of all,  represent restoring of the 2- and 1-order coherence matrices (without non-diagonal part of the 0-order coherence matrix), requiring a special structure for
+the 0-order coherence matrix. Then we give some notes on restoring the nondiagonal part  of the 0-order coherence matrix.}
+
+%given by (\ref{rho00})  which identically  transfers from the sender to the receiver. 
+
+%Thus, we stay with equations (\ref{N2cohlam1}),  (\ref{N1constr1}) - (\ref{N1constr3}) 
+%to restore the 2-order and 1-order coherence matrices. 
+Thus we have $N=2$ and $k=1$ in formulas (\ref{N2cohlam1})-(\ref{klambda2}).
+All multi-indexes associated with the sender and receiver consist of two entries $\{n_1,n_2\}$, $n_i=0,1$, $i=1,2$. 
+In particular $1_{R}=1_S=\{1,1\}$, $0_{R}=0_S=\{0,0\}$. 
+Eq.(\ref{N2cohlam1}) yields
+\begin{eqnarray}\label{ExN2cohlam1}
+\lambda^{(2)}_{11,11}=
+(W^{(2)})^+_{11, 0_{TL}, 00;00,0_{TL},11}.
+\end{eqnarray}
+Eqs.(\ref{kconstr1}) and (\ref{kconstr2}) yield
+\begin{eqnarray}\label{ExN1constr1}
+&&
+W^{(1)}_{00,0_{TL},n_1n_2;i_1i_2, 0_{TL}, 00} =0,\\\nonumber
+&&
+(n_1,n_2) \neq (i_1,i_2), \;\;n_1+n_2=i_1+i_2=1 
+\;\;{\mbox{(2 equations)}}
+\end{eqnarray}
+\iffalse
+\begin{eqnarray}\label{ExN1constr2}
+&&
+(W^{(1)})^+_{m_1m_2, 0_{TL} 00;00,0_{TL}, n_1n_2} =0\;\;\Leftrightarrow \\\nonumber
+&&
+W^{(1)}_{00,0_{TL}, n_1n_2;m_1m_2, 0_{TL} 00} =0, 
+\;\;M_R \neq J_S,\;\;|N_R|=|J_S|=1\;\;{\mbox{(2 equations)}},
+\end{eqnarray}
+\fi
+\begin{eqnarray}\label{ExN1constr3}
+&&\sum_{{i_1,i_2,N_{TL}}\atop{|N_{TL}|+i_1+i_2=1}}
+W^{(1)}_{i_1i_2, N_{TL},00;n_1n_2, 0_{TL}, 00}  
+(W^{(2)})^+_{11, 0_{TL}, 00;i_1i_2, N_{TL}, m_1m_2} =0,\\\nonumber
+&&
+|I_S|=|M_R|=1\;\;{\mbox{(4 equations)}},
+\end{eqnarray}
+In addition, eqs.(\ref{klambda1}) and  (\ref{klambda2}) yield the following definitions of the scale factors:
+\begin{eqnarray}\label{ExN1lam1}
+&&
+\lambda^{(1)}_{n_1n_2, 11}=W^{(1)}_{00,0_{TL}, n_1n_2;n_2n_2, 0_{TL}, 00} W^{(2)}_{11,0_{TL},00;00,0_{TL},11},\;\;n_1+n_2=1\\
+\label{ExN1lam2}
+&&
+\lambda^{(1)}_{00, m_1m_2} = (W^{(1)})^+_{m_1m_2, 0_{TL}, 00;00,0_{TL}, m_1m_2},\;\;m_1+m_2=1.
+\end{eqnarray}
+For the elements $\rho^{(R;0)}_{11,11}$ and $\rho^{(R;0)}_{00,00}$   of 0-order coherence matrix (\ref{rhoNMR0a}), (\ref{rhoNMR0dC}) we have
+%$\rho^{(R;0)}_{11,11}$ and $\rho^{(R;0)}_{00,00}$ we have from (\ref{rhoNMR0a}) and :
+\begin{eqnarray}
+&&\rho^{(R;0)}_{11,11}= | W^{(2)}_{00,0_{TL},11;11,0_{TL},00}|^2 \rho^{(S;0)}_{11,11},\\\label{R1111}
+&&\rho^{(R;0)}_{00,00}= \rho^{(S;0)}_{00,00} +
+\\\nonumber
+&&
+\sum_{{k_1,k_2,N_{TL}}\atop{k_1+k_2+|N_{TL}|=2}}
+|W^{(2)}_{k_1k_2,N_{TL},00;11, 0_{TL},00}|^2  \rho^{(S;0)}_{11,11} 
+ +\\\nonumber
+&&
+\sum_{{k_1,k_2,N_{TL}}\atop{k_1+k_2+|N_{TL}|=1}}
+\sum_{{i_1+i_2=}\atop{j_1+j_2=1}}
+W^{(1)}_{k_1k_2,N_{TL},00;i_1i_2, 0_{TL},00}  \rho^{(S;0)}_{i_1i_2,j_1j_2} 
+(W^{(1)})^+_{j_1j_2, 0_{TL},00;k_1k_2, N_{TL},00} .
+\end{eqnarray}
+The last term in eq.(\ref{R1111}) can be simplified due to the unitarity of $W^{(1)}$, which assumes
+\begin{eqnarray}
+&&
+\sum_{{k1,k_2,l_1,l_2,N_{TL}}\atop{{k_1+k_2+l_1+}\atop{l_2+|N_{TL}|=1}}} W^{(1)}_{k_1k_2,N_{TL},l_1l_2; i_1i_2,0_{TL},00} (W^{(1)})^+_{i_2i_1,0_{TL},00;k_1k_2,N_{TL},l_1l_2} =0,\\\nonumber
+&&
+i_1+i_2=j_1+j_2=1,
+\end{eqnarray}
+and condition (\ref{ExN1constr1}), so that
+\begin{eqnarray}\label{rho00ex}
+&&\rho^{(R;0)}_{00,00}= \rho^{(S;0)}_{00,00} +
+\\\nonumber
+&&
+\sum_{{k_1,k_2,N_{TL}}\atop{k_1+k_2+|N_{TL}|=2}}
+|W^{(2)}_{k_1k_2,N_{TL},00;11, 0_{TL},00}|^2  \rho^{(S;0)}_{11,11} 
+ +\\\nonumber
+&&
+\sum_{{k_1,k_2,N_{TL}}\atop{k_1+k_2+|N_{TL}|=1}}
+\sum_{{i_1,i_2}\atop{i_1+i_2=1}}
+|W^{(1)}_{k_1k_2,N_{TL},00;i_1i_2, 0_{TL},00}|^2  \rho^{(S;0)}_{i_1i_2,i_1i_2} .
+\end{eqnarray}
+
+Other elements of $\rho^{(R;0)}$ satisfy eq.(\ref{rhoNMR0bz}) which now reads
+\begin{eqnarray}\label{rhoNMR0bzN2}
+&&\rho^{(R;0)}_{n_1n_2,m_1m_2} =\rho^{(S;0)}_{n_1n_2,m_1m_2} =
+\\\nonumber
+&&
+W^{(1)}_{00,0_{TL},n_1n_2;n_1n_2, 0_{TL},00}  \rho^{(S;0)}_{n_1n_2,m_1m_2} 
+(W^{(1)})^+_{m_1m_2, 0_{TL},00 ;00,0_{TL},m_1m_2}+\\\nonumber
+&&
+\sum_{{k_1,k_2,N_{TL}}\atop{k_1+k_2+|N_{TL}|=1}}
+W^{(2)}_{k_1k_2,N_{TL},n_1n_2;11, 0_{TL},00}  \rho^{(S;0)}_{11,11} 
+(W^{(2)})^+_{11, 0_{TL},00 ;k_1k_2,N_{TL},m_1m_2},\\\nonumber
+&&
+n_1+n_2=m_1+m_2=1.
+\end{eqnarray}
+The condition (\ref{SR}) is satisfied in this case, constrain (\ref{SR1}) can also be imposed.
+
+\iffalse
+for 0-order coherence matrix, we have from (\ref{rhoS0}) - (\ref{rhoNMR0d2}):
+\begin{eqnarray}\label{rhoS0ex}
+&&\rho^{(S;0)} ={\mbox{diag}}(\rho^{(S;0)}_{00,00}, \rho^{(S;0)}_{01,01},0,0),\\
+&&\rho^{(R;0)} ={\mbox{diag}}(\rho^{(R;0)}_{00,00}, \rho^{(R;0)}_{01,01},0,0),\\
+&&\rho^{(S;0)}_{01,01} =
+W^{(1)}_{00,0_{TL},01;01, 0_{TL}, 00}  \rho^{(S;0)}_{01,01} 
+(W^{(1)})^+_{01, 0_{TL}, 00;00,0_{TL},01},
+\end{eqnarray}
+\begin{eqnarray}\label{rhoNMR0d2ex}
+&&\rho^{(R;0)}_{00,00} =
+\sum_{i_1+i_2+|N_{TL}|=1} |W^{(1)}_{i_1i_2,N_{TL},00;01, 0_{TL} 00}|^2  (1-\rho^{(S;0)}_{00,00}) + \rho^{(S;0)}_{00,00}.
+\end{eqnarray}
+\fi
+{
+From the structure of eqs. (\ref{rho00ex}) and (\ref{rhoNMR0bzN2}) it follows that for restoring the non-diagonal part of $\rho^{(S;0)}$ we  have equation:
+\begin{eqnarray}\label{constr0}
+\sum_{{k_1,k_2,N_{TL}}\atop{k_1+k_2+|N_{TL}|=1}}
+W^{(2)}_{k_1k_2,N_{TL},01;11, 0_{TL},00}  
+(W^{(2)})^+_{11, 0_{TL},00 ;k_1k_2,N_{TL},10}=0
+\end{eqnarray}
+with an additional scale factor
+\begin{eqnarray}
+\lambda^{(0)}_{01,10} =W^{(1)}_{00,0_{TL},01;01, 0_{TL},00}   
+(W^{(1)})^+_{10, 0_{TL},00 ;00,0_{TL},10}.
+\end{eqnarray}
+}
+\subsection{Evolution governed by $XX$-Hamiltonian}
+
+We consider the dynamics of the spin-1/2 chain governed by the $XX$-Hamiltonian taking into account dipole-dipole interactions  among all nodes: 
+\begin{eqnarray}\label{XXall}
+H=\sum_{j>i} D_{ij}(I_{i;x}I_{j;x}+I_{i;y}I_{j;y}),
+\end{eqnarray}
+where $D_{ij}=\frac{\gamma^2 \hbar}{r_{ij}^3}$ is the coupling constant,  $\gamma$ is the gyromagnetic ratio, $\hbar$  is the Planck constant. For the homogeneous chain   $r_{i,i+1}=r$, therefore the coupling constants between the nearest neighbors are the same.
+
+Following Ref.\cite{Z_2018}, we consider the chain of 42 nodes with 2 pairs of adjusted 
+coupling constants \cite{ABCVV} and chose the time instant $t_0$ for state registration according to (\ref{t_0}):
+% equals to the time instant of maximum of $|\rho^{(R)}_{00,11}|$ in the evolution %without applying the unitary transformation to the extended receiver:
+\begin{eqnarray}
+\delta_1=\delta_{N-1}=0.3005 \delta, \;\;\delta_2=\delta_{N-2}=0.5311 \delta, \;\;t_0 = 58.9826,
+\end{eqnarray}
+where $\delta$ is the nearest-neighbor coupling constant between inner nodes of the chain. 
+We take the extended receiver of four nodes and unitary transformation having the block-diagonal form, see (\ref{U}) - (\ref{Uvarphi}),
+\begin{eqnarray}
+&&U={\mbox{diag}}(1,U^{(1)}(\varphi^{(1)}),U^{(2)}(\varphi^{(2)})),\\\nonumber
+&&\varphi=(\varphi^{(1)},\varphi^{(2)}),\;\;\varphi^{(1)} =(\varphi^{(1)}_1,\dots,\varphi^{(1)}_{12}),\;\;\varphi^{(2)} =(\varphi^{(2)}_1,\dots,\varphi^{(2)}_{30}),  
+\end{eqnarray}
+where $U^{(1)}$ and $U^{(2)}$ are, respectively, $4\times 4$ and $6\times 6$ unitary transformations in the subspaces of one and two excited spins. 
+System (\ref{ExN1constr1}), (\ref{ExN1constr3}) consists of 6 independent complex  equations
+for the parameters $\varphi$ of the unitary transformation. 
+Solution of this system is not unique. Our purpose is to find such unitary transformations which maximize the scale factors in formulas (\ref{ExN2cohlam1}), (\ref{ExN1lam1}) and (\ref{ExN1lam2}). As an {objective function} for  optimization we take the sum $Z$ of absolute values of these parameters,
+{
+\begin{eqnarray}
+Z=|\lambda^{(1)}_{00,01}|+|\lambda^{(1)}_{00,10}|+ 
+|\lambda^{(1)}_{01,11}|+|\lambda^{(1)}_{10,11}|+|\lambda^{(2)}_{00,11}|,
+\end{eqnarray}
+}
+{ and perform the rough maximization setting \cite{Z_2018}
+\begin{eqnarray}\label{Z}
+Z=2.391,
+\end{eqnarray}
+  calculating 1000 solutions of the system (\ref{ExN1constr1}), (\ref{ExN1constr3}), (\ref{Z}) and selecting the solution which 
+corresponds to the maximal value of the minimal scale factor. }{ Each solution is found by the Newton method  starting with the random set of initial values for parameters $\varphi$ in the range $(0,1)$}. Then we solve system (\ref{rhoNMR0bzN2}) with
+\begin{eqnarray}\label{nnn}
+(n_1,n_2,m_1,m_2)=(0,1,1,0),\;\;(0,1,0,1),\;\;(1,0,1,0)
+\end{eqnarray}
+for  $\rho^{(S;0)}_{01,10}$, $\rho^{(S;0)}_{01,01}$, $\rho^{(S;0)}_{10,10}$.
+As the result, we obtain $\rho^{(R)}$ {(the scale factors  and the elements $\rho^{(S;0)}_{01,10}$, $\rho^{(S;0)}_{01,01}$, $\rho^{(S;0)}_{10,10}$ are at the appropriate positions in the formula for $\rho^{(R)}$)}
+%\iffalse
+\iffalse
+{\small
+\begin{eqnarray}\nonumber
+\rho^{(R)}=\left(
+\begin{array}{cccc}
+1-0.8265(1-\rho^{(S)}_{00,00}) & 0.9091 e^{-3.1145 i }\rho^{(S)}_{00,01}&0.5866 e^{-1.4086i }\rho^{(S)}_{00,10} & 0.1782e^{-0.0956i }\rho^{(S)}_{00,11}\cr
+0.9091 e^{3.1145 i } (\rho^{(S)}_{00,01})^*& 0.8265(1-\rho^{(S)}_{00,00}) &0&0.1620e^{3.0189i }\rho^{(S)}_{01,11}\cr
+0.5866 e^{1.4086i }(\rho^{(S)}_{00,10})^* &0&0&0.1045e^{1.3130 i}\rho^{(S)}_{10,11}\cr
+0.1782e^{0.0956i } (\rho^{(S)}_{00,11})^*&0.1620e^{-3.0189i }(\rho^{(S)}_{01,11})^*&0.1045e^{-1.3130 i}(\rho^{(S)}_{10,11})^*&0
+\end{array}
+\right)
+\end{eqnarray}
+}
+\fi
+{\small
+\begin{eqnarray}\label{EXrho}
+&&\rho^{(R)}=\\\nonumber
+&&\left(
+\begin{array}{cccc}
+1- 0.517(1-\rho^{(S)}_{00,00}) & 0.575 e^{-1.812 i }\rho^{(S)}_{00,01}&0.616 e^{3.061i }\rho^{(S)}_{00,10} &  0.548e^{0.257i }\rho^{(S)}_{00,11}\cr
+0.575 e^{1.812 i } (\rho^{(S)}_{00,01})^*& 0.214(1-\rho^{(S)}_{00,00}) &0.031 e^{ -2.432i} (1-\rho^{(S)}_{00,00})   &0.315e^{2.070i }\rho^{(S)}_{01,11}\cr
+ 0.616 e^{-3.061i }(\rho^{(S)}_{00,10})^* &0.031  e^{ 2.432i}(1-\rho^{(S)}_{00,00}) &0.095(1-\rho^{(S)}_{00,00})&0.337e^{ -2.804 i}\rho^{(S)}_{10,11}\cr
+0.548e^{-0.257i }(\rho^{(S)}_{00,11})^*&0.315e^{-2.070i }(\rho^{(S)}_{01,11})^*&0.337e^{ 2.804 i}(\rho^{(S)}_{10,11})^*& 0.208(1-\rho^{(S)}_{00,00})
+\end{array}
+\right)
+\end{eqnarray}
+}
+%\fi
+\iffalse
+{\small
+\begin{eqnarray}\nonumber
+\rho^{(R)}=\left(
+\begin{array}{cccc}
+1-0.827(1-\rho^{(S)}_{00,00}) & 0.909 e^{-3.114 i }\rho^{(S)}_{00,01}&0.587 e^{-1.409i }\rho^{(S)}_{00,10} & 0.178e^{-0.096i }\rho^{(S)}_{00,11}\cr
+0.909 e^{3.114 i } (\rho^{(S)}_{00,01})^*& 0.827(1-\rho^{(S)}_{00,00}) &0&0.162e^{3.019i }\rho^{(S)}_{01,11}\cr
+0.587 e^{1.409i }(\rho^{(S)}_{00,10})^* &0&0&0.105e^{1.313 i}\rho^{(S)}_{10,11}\cr
+0.178e^{0.096i } (\rho^{(S)}_{00,11})^*&0.162e^{-3.019i }(\rho^{(S)}_{01,11})^*&0.105e^{-1.313 i}(\rho^{(S)}_{10,11})^*&0
+\end{array}
+\right)
+\end{eqnarray}
+}
+\fi
+with the sender's initial state $\rho^{(S)}(0)$ in the form
+\begin{eqnarray}\nonumber
+\rho^{(S)}=\left(
+\begin{array}{cccc}
+\rho^{(S)}_{00,00} & \rho^{(S)}_{00,01}&\rho^{(S)}_{00,10} & \rho^{(S)}_{00,11}\cr
+ (\rho^{(S)}_{00,01})^*& 0.214 (1-\rho^{(S)}_{00,00}) &0.031 e^{ -2.432i}(1-\rho^{(S)}_{00,00})&\rho^{(S)}_{01,11}\cr
+(\rho^{(S)}_{00,10})^* &0.031 e^{ 2.432i}(1-\rho^{(S)}_{00,00})& 0.095(1-\rho^{(S)}_{00,00})&\rho^{(S)}_{10,11}\cr
+ (\rho^{(S)}_{00,11})^*&(\rho^{(S)}_{01,11})^*&(\rho^{(S)}_{10,11})^*& 0.691(1-\rho^{(S)}_{00,00})
+\end{array}
+\right).
+\end{eqnarray}
+{The non-zero-order coherence matrices include 5 arbitrary complex parameters: $\rho^{(S)}_{00,01}$, $\rho^{(S)}_{00,10}$,  $\rho^{(S)}_{00,11}$, 
+$\rho^{(S)}_{01,11}$, $\rho^{(S)}_{10,11}$. 
+{We do not represent the explicite form of $U_{opt}$.}
+
+Further, we consider constraint (\ref{SR1}) together with block structure (\ref{Block}). In our case of 2-qubit sender and receiver, the above block structure includes only 0-order coherence matrix, so that there is no higher order coherence matrices. Therefore we disregard $U_{opt}$ (or set $\varphi=0$).  We solve system (\ref{rhoNMR0bzN2}) with $(n_1,n_2,m_1,m_2)$ from (\ref{nnn})  
+together with  eq. (\ref{SR1}) for the matrix elements $\rho^{(S;0)}_{01,10}$, $\rho^{(S;0)}_{01,01}$, $\rho^{(S;0)}_{10,10}$, $\rho^{(S;0)}_{00,00}$ in view of normalization $\sum_{i,j=0}^1 \rho^{(S;0)}_{ij,ij}=1$. After exchanging the first and last columns and rows in the derived matrix we obtain
+\begin{eqnarray}\label{rhoRS}
+&&\rho^{(R)}(t_0)=\rho^{(S)}(0) =\left(
+\begin{array}{cccc}
+0.130 & 0&0 & 0\cr
+0& 0.487&0.110e^{-1.290i}   &0\cr
+0& 0.110e^{1.290i} &0.085\cr
+0&0&0&0.298
+\end{array}
+\right).
+\end{eqnarray}
+ 
+ Notice, that  there is no free parameters in the density matrix (\ref{rhoRS}). 
+ %They appear in the case of sender and receiver of higher dimensions, when the block-matrix 
+ %(\ref{Block}) includes not only the 0-order coherence matrix.
+ However, according to Sec.\ref{Section:0orderRestoring}, the nondiagonal elements of 0-order coherence matrix can carry an arbitrary  parameter. For that, we have to satisfy  condition (\ref{constr0}). 
+We perform the rough maximization  similar to maximization in deriving state (\ref{EXrho}) with $Z=|\lambda^{(0)}_{01,10}|$ to result in the state with single arbitrary parameter $\rho^{(S;0)}_{01,10}$:
+ \begin{eqnarray}\label{rhoRS2}
+&&\rho^{(R)}(t_0) =\left(
+\begin{array}{cccc}
+0.006 & 0&0 & 0\cr
+0& 0.604&0.560e^{2.393i} \rho^{(S;0)}_{01,10}   &0\cr
+0& 0.560e^{-2.393i} (\rho^{(S;0)}_{01,10})^* &0.032\cr
+0&0&0&0.358
+\end{array}
+\right).
+\end{eqnarray}
+ }
+
+ \section{Conclusion}
+ \label{Section:conclusion}
+
+{
+We consider a  quantum system which is a spin-1/2 chain 
+consisting of sender  $S$, transmission line $TL$ and receiver $R$ placed in strong magnetic field with sender and receiver having the same dimension. The system's  dynamics is governed by the Hamiltonian preserving the number of excitation in the system. As was  shown in \cite{FZ_2017}, such dynamics  prevents  multi-quantum coherence matrices from mixing.  However, the problem of mixing the elements inside of each coherence matrix remains. Partially this problem was resolved in \cite{Z_2018} for the 2-qubit sender and receiver.  Here we generalize the protocol of Ref.\cite{Z_2018} to the multiqubit sender and receiver, ${\mbox{dim}} S ={\mbox{dim}} R $. 
+
+The state of the receiver must be registered at a certain time instant $t_0$. We fix $t_0$ as a time instant maximizing the $N$-order coherence intensity  ($N=2$ in example of Sec.\ref{Section:example}) without applying the unitary transformation to the extended receiver.
+
+
+%The evolution feature of 0-order coherence matrix (\ref{inst}) allows us to use this matrix
+%to provide the complete structural restoring of the sender's initial density matrix including arbitrary admittable higher order coherence matrices.
+For the restoring purpose, an extended receiver is introduced into the chain. This object includes receiver  as a subsystem and serves to handle the receiver's state through a unitary transformation.   The dimension of the extended receiver must be large enough so that the appropriate unitary transformation possesses enough number of free parameters $\varphi$ to restore the structure of the  elements of the higher order  coherence matrices and, if needed, to optimize the scale factors and to restore the nondiagonal elements of the 0-order coherence matrix.  We describe in detail the protocol for constructing this optimizing unitary transformation  for the sender and receiver of arbitrary dimension.  The constructed transformation is universally optimal, i.e., ones constructed it can be used to structurally restore any higher-order coherence of the sender's initial state. 
+
+We also find such 0-order coherence matrix that can be perfectly transferred to the receiver up to the  exchange of two elements corresponding to the blocks of states with zero and maximal possible excitations. If the sender's initial state $\rho^{(S)}(0)$  has the block structure (\ref{Block}), then the complete structural restoring of the transferred matrix is possible. Notice that 
+each element of the higher-order coherence matrix transfers a free parameter. 
+On the contrary, 
+%although 
+the 0-order coherence matrix 
+with perfectly transferred nondiagonal elements
+does not carry any free parameter because all its elements are fixed.
+%, see for instance (\ref{rhoRS}), i.e., it has zero information capacity. 
+However,  we can extend the restoring protocol to the non-diagonal elements 
+of the 0-order coherence matrix, in that case free parameters of the initial sender's state appear in the non-diagonal part of 0-order coherence matrix. 
+An example of a two-qubit state restoring is explored in details.  
+
+%governed by $XX$-Hamiltonian taking into account dipole-dipole interactions  among all nodes of the chain. This Hamiltonian conserves the excitation number in the 
+%system as shown in \cite{FZ_2017}. 
+%We  find the special form of the 0-order coherence matrix of the sender which is invariant 
+%under considered evolution. 
+
+
+This work was funded by Russian Federation represented by the Ministry of
+Science and Higher Education (grant number 075-15-2020-788).
+}
+\fi
+\fi
+\begin{thebibliography}{99}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\bibitem{BZ_2018}
+%Бочкин Г.А., Зенчук А.И. Оптимизация удаленного создания одно- и двухкубитных
+%состояний посредством унитарных преобразований передатчика и расширенного прием-
+%ника// ТМФ. 2018. Т.194. В.2. С.343.
+Bochkin G.A. and Zenchuk  A.I.
+ Optimization of remote one- and two-qubit state creation via  unitary transformations  of sender and  extended receiver, 
+Theor.Math.Phys. {\bf 194}(2),  (2018) 295
+%295-312
+
+\bibitem{WuPe2007} 
+Wu R., Pechen A., Brif C., and Rabitz H. Controllability of open quantum systems with Kraus-map dynamics, J. Phys. A: Math. Theor. {\bf 40} (2007) 5681
+%-5693, https://doi.org/10.1088/1751-8113/40/21/015 .
+
+\bibitem{Kraus}
+Kraus K.  General state changes in quantum theory, Ann. Phys. {\bf 64},  (1971) 311
+
+\bibitem{PeRa2006} 
+Pechen A., Rabitz H., Teaching the environment to control quantum systems, Phys. Rev. A {\bf 73} (2006) 0621023
+
+\bibitem{Morzhin2019} 
+Morzhin O.V., Pechen A.N., Maximization of the overlap between density matrices for a two-level open quantum system driven by coherent and incoherent controls, Lobachevskii J. Math. {\bf 40}:10 (2019) 1532--1548
+
+\bibitem{Morzhin2020} 
+Morzhin O.V., Pechen A.N., Machine learning for finding suboptimal final times and coherent and incoherent controls for an open two-level quantum system, Lobachevskii J. Math. {\bf 41}:12 (2020) 2353--2368
+
+\bibitem{PPN2020} 
+Morzhin O.V., Pechen A.N., Maximization of the Uhlmann--Jozsa fidelity for an open two-level quantum system with coherent and incoherent controls, Phys. Part. Nucl., {\bf 51}:4 (2020), 464--469
+
+\bibitem{Volkov2021} 
+Volkov B.O., Morzhin O.V., Pechen A.N., Quantum control landscape for ultrafast generation of single-qubit phase shift quantum gates, J. Phys. A: Math. Theor. {\bf 54}:21 (2021) 215303
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibitem{BFZ_Arch2018}
+Bochkin G.A., Fel'dman E.B., and  Zenchuk A.I. 
+Transfer of scaled multiple-quantum coherence matrices, Quant.Inf.Proc. {\bf 17}, (2018) 218 
+
+\bibitem{FPZ_Arxiv2021}
+E.B. Fel'dman, A.N. Pechen, and A.I. Zenchuk,
+Complete structural restoring of transferred multi-qubit quantum
+state, arXiv:2104.13762 [quant-ph]
+
+
+\bibitem{Z_2018}
+Zenchuk A.I. Partial structural restoring of two-qubit transferred state,
+Phys.Lett. A. {\bf 382} (2018) 3244
+
+\bibitem{FPZ_arxiv2021}
+ E.B. Fel'dman, A.N. Pechen, A.I. Zenchuk, arXiv:2104.13762 
+%Complete structural restoring of transferred multi-qubit quantum state
+
+\bibitem{FZ_2017}
+%Фельдман Э.Б., Зенчук А.И.
+%Эволюция и перенос когерентностей с восстановлением начального состояния передатчика// ЖЭТФ. %2017. Т.152. В.6. С.1222.
+E.B.Fel'dman and A.I.Zenchuk Coherence Evolution and Transfer Supplemented
+by Sender's Initial-State Restoring,  JETP {\bf 125}(6), (2017) 1042
+%pp.1042-1050 
+
+\bibitem{Bose}
+ Bose S. Quantum communication through an unmodulated spin chain, Phys. Rev. Lett. 
+ {\bf 91}  (2003) 207901
+
+\bibitem{NC}
+Nielsen M.A., and Chuang I.L. Quantum Computation and Quantum Information.
+Cambridge:Cambridge Univ.Press. (2010) 
+%676 p.
+
+\bibitem{BBCJPW}
+Bennett C.H., Brassard G., Cr\'epeau C., Jozsa R., Peres A., and Wootters W.K. Teleporting
+an unknown quantum state via dual classical and Einstein-Podolsky-Rosen channels,
+Phys.Rev.Lett.  {\bf 70} (1993) 1895
+
+\bibitem{BPMEWZ}
+Bouwmeester D., Pan J.-W., Mattle K., Eibl M., Weinfurter H., and Zeilinger A.
+Experimental quantum teleportation, Nature  {\bf 390}, (1997) 575
+
+\bibitem{BBMHP}
+Boschi D., Branca S., De Martini F., Hardy L., and Popescu S. Experimental Realization
+of Teleporting an Unknown Pure Quantum State via Dual Classical and Einstein-Podolsky-
+Rosen Channels, Phys. Rev. Lett.  {\bf 80} (1998) 1121
+
+ \bibitem{CDEL}
+ Christandl M., Datta N., Ekert  A., and Landahl A.J. Perfect state transfer in quantum spin networks, Phys.Rev.Lett. {\bf 92} (2004) 187902
+ 
+\bibitem{KS}
+Karbach P., and Stolze J. Spin chains as perfect quantum state mirrors,
+Phys.Rev.A.  {\bf 72} (2005) 030301(R)
+ 
+\bibitem{GKMT}
+ Gualdi G., Kostak V., Marzoli I., and Tombesi P. Perfect state transfer in long-range interacting spin chains,
+Phys.Rev. A.   {\bf 78} (2008) 022325
+
+%different aspects
+\bibitem{FR}
+Fel'dman E.B., Rudavets M.G. Exact results on spin dynamics and multiple quantum NMR
+dynamics in alternating spin- 1/ 2 chains with XY-Hamiltonian at high temperatures,
+JETP Letters {\bf 81} (2005) 47
+%47-52
+
+\bibitem{KF}
+%Кузнецова Е.И., Фельдман Э.Б. Точные решения в динамике альтернированных от-
+%крытых цепочек спинов s = 1/2 с гамильтонианом XY и их применение к задачам
+%многоквантовой динамики и квантовой теории информации, ЖЭТФ. 2006. Т.129. В.6.
+%С.1006.
+Kuznetsova E.I. and Fel'dman E.B. Exact Solutions in the Dynamics of Alternating Open Chains
+of Spins s = 1/2 with the XY Hamiltonian and Their Application
+to Problems of Multiple-Quantum Dynamics
+and Quantum Information Theory, JETP,  {\bf 102}(6), (2006) 882
+%pp. 882?893. 
+
+\bibitem{CGIZ}
+Campos Venuti L., Giampaolo S.M., Illuminati F., and Zanardi P. Long-distance
+entanglement and quantum teleportation in XX spin chains, Phys.Rev.A. {\bf 76},
+(2007) 052328
+
+\bibitem{GMT}
+Gualdi G., Marzoli I., Tombesi P. Entanglement generation and perfect state transfer in
+ferromagnetic qubit chains, New J. Phys.  {\bf 11} (2009) 063038
+
+\bibitem{DPF}
+%Доронин С.И., Пырков А.Н., Фельдман Э.Б. Запутанность спиновых пар в альтерни-
+%рованной открытой цепочке ядерных спинов s = 1/2 с XY-гамильтонианом// ЖЭТФ.
+%2007. Т.132. В.5. С.1091.
+Doronin S. I. , Pyrkov A. N. , and  Fel'dman E. B. Entanglement of Spin Pairs in Alternating Open Spin-1/2 Chains with the XY Hamiltonian, JETP {\bf 105}(5), (2007) 953
+%953-961
+
+\bibitem{BBVB}
+Banchi L., Bayat A., Verrucchi P., and Bose S. Nonperturbative Entangling Gates between
+Distant Qubits Using Uniform Cold Atom Chains, Phys.Rev.Let. {\bf 106} (2011) 140501
+
+\bibitem{CRMF}
+De Chiara G., Rossini D., Montangero S., and Fazio R. From perfect to fractal transmission
+in spin chains, Phys. Rev. A. {\bf 72} (2005) 012323
+
+\bibitem{ZASO}
+Zwick A., \'Alvarez G.A., Stolze J., Osenda O. Robustness of spin-coupling distributions for
+perfect quantum state transfer, Phys. Rev. A. {\bf 84} (2011) 022311
+
+  \bibitem{ZASO2}
+Zwick  A. ,  \'Alvarez G.A.,
+ Stolze J., and Osenda O. 
+Spin chains for robust state transfer: Modified boundary couplings versus completely
+engineered chains, Phys. Rev. A.  {\bf 85} (2012) 012318
+
+\bibitem{ZASO3}
+Zwick A., \'Alvarez G.A. , Stolze J., and Osenda O. Quantum state transfer in disordered
+spin chains: How much engineering is reasonable? Quant. Inf. Comput.  {\bf 15}(7-8), (2015)
+582
+
+\bibitem{PBGWK}
+Peters N.A., Barreiro J.T., Goggin M.E., Wei T.-C., and Kwiat P.G. Remote State
+Preparation: Arbitrary Remote Control of Photon Polarization, Phys.Rev.Lett. {\bf 94},
+(2005) 150502
+
+\bibitem{PBGWK2}
+Peters N.A., Barreiro J.T., Goggin M.E., Wei T.-C., and Kwiat P.G. Remote State
+Preparation: Arbitrary remote control of photon polarizations for quantum communication,
+Quantum Communications and Quantum Imaging III, ed. R.E.Meyers, Ya.Shih. Proc. of
+SPIE  {\bf 5893} SPIE. Bellingham. WA. (2005)
+
+%creation
+\bibitem{DLMRKBPVZBW}
+Dakic B. , Lipp Ya.O., Ma X., Ringbauer M., Kropatschek S., Barz S., Paterek T., Vedral
+V., Zeilinger A., Brukner C., and Walther P. Quantum discord as resource for remote state
+preparation, Nat. Phys. {\bf 8}, (2012) 666
+
+\bibitem{PSB}
+Pouyandeh S., Shahbazi F., Bayat A. Measurement-induced dynamics for spin-chain quantum
+communication and its application for optical lattices, Phys.Rev.A. {\bf 90}, 
+(2014) 012337
+
+
+%spins
+\bibitem{LH}
+Liu L.L., and Hwang T. Controlled remote state preparation protocols via AKLT states,
+Quant.Inf.Process. {\bf 13} (2014) 1639
+
+\bibitem{Z_2014}
+Zenchuk A.I. Remote  creation of a one-qubit mixed state through a short homogeneous spin-1/2 chain,
+Phys.Rev.A. {\bf 90} (2014) 052302
+
+\bibitem{BZ_2015}
+Bochkin G.A., and Zenchuk A.I. Remote one-qubit-state control using the pure initial state of a two-qubit sender:
+Selective-region and eigenvalue creation,  Phys.Rev.A. {\bf 91}, (2015) 062326
+
+
+
+\bibitem{Kraus}
+Kraus K.  General state changes in quantum theory, Ann.Phys. {\bf 64},  (1971) 311
+
+
+%2 pairs
+
+%teleport
+\iffalse
+
+\fi
+
+\bibitem{WuPe2007} 
+Wu R., Pechen A., Brif C., and Rabitz H. Controllability of open quantum systems with Kraus-map dynamics, J. Phys. A {\bf 40}, (2007) 5681
+-%5693, https://doi.org/10.1088/1751-8113/40/21/015 .
+
+\bibitem{BoPe2020}
+Bondar, D.I., Pechen, A.N. Uncomputability and complexity of quantum control, Sci Rep {\bf 10}, (2020) 1195 %https://doi.org/10.1038/s41598-019-56804-1
+
+\bibitem{ABCVV}
+Apollaro T.J.G., Banchi L., Cuccoli A., Vaia R., and Verrucchi P. 99\%-fidelity ballistic
+quantum-state transfer through long uniform channels, Phys.Rev.A. {\bf 85}, (2012) 052319
+\end{thebibliography}
+
+\end{document}
+
+\bibitem{FKZ_2015}
+Fel'dman E.B., Kuznetsova E.I., and Zenchuk A.I. Temperature-dependent remote control of polarization and coherence intensity with sender's pure initial state,
+Quant.Inf.Proc. {\bf 15}, (2016) 2521
+
+
+%3pairs
+\bibitem{B}
+Banchi L. Ballistic quantum state transfer in spin chains: General theory for quasi-free models
+and arbitrary initial states, Eur.Phys.J.Plus. {\bf 128}, (2013) 137
+
+
+
+
+
+
+
+
+

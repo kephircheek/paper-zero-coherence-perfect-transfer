@@ -1,0 +1,21 @@
+# --editor-policy--
+# sentence-per-line
+# equation-highlighting: surround equation with '%'
+# equation-labeling: set label in line with equation starting 
+# spaces-after-commas
+# spaces-around-operators
+root = true
+
+[*]
+trim_trailing_whitespace = false
+
+[*.tex]
+# end_of_line = crlf
+# charset = utf8
+# trim_trailing_whitespace = true
+insert_final_newline = false
+indent_style = tab
+indent_size = 2
+
+[*.{diff,md}]
+trim_trailing_whitespace = false
