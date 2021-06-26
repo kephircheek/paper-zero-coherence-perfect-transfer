@@ -686,28 +686,58 @@ For the 3- and 4-node sender this time instances $ t^{(3)}_1$ and $ t^{(4)}_1$ f
 
 
 \subsection{Perfect state  transfer}
-We consider the perfect transfer of the 0-order coherence matrix in the basis of no more then one excitation. This strongly restricts the dimension of the considered density matrix and allows to work out carefully many aspects of the considered type of state transfer through the long chains. 
+We consider the perfect transfer of the 0-order coherence matrix in the basis of no more then one excitation. 
+This strongly restricts the dimension of the considered density matrix 
+and allows to work out carefully many aspects of the considered type of state transfer through the long chains.
 
-The general form of the $N^{(S)}$-qubit sender initial density matrix is (\ref{tssK}), (\ref{ts}) with $K=1$.
-The solution of system (\ref{T})  ($K=1$) is not unique. 
-We find such solution that maximizes the deviation (\ref{del}). 
-In this case the unitary transformation (\ref{U}) includes the only nontrivial block $U^{(1)}$ with parameters $\varphi^{(1)}$. 
-The construction of the matrix that can be perfectly transferred consists of two steps.
+In the case a general form of the~$N^{(S)}$-qubit~sender initial density matrix is~(\ref{tssK}),~(\ref{ts}) with~$K=1$.
+A unitary transformation~(\ref{U}) includes the only nontrivial block $U^{(1)}$ with parameters $\varphi^{(1)}$.
 
-First, solving system (\ref{T}) with $K=1$ to fix the parameters $\varphi$ of the unitray transformation (\ref{U}).
-
-Second,  solve the system (\ref{rsred}) for the element of the initial  sender density mastrix, which for the case $K=1$ reads
+A matrix construction that can be perfectly transferred consists of two steps.
+First, one solve system~(\ref{T}) with~$K=1$ to fix the parameters~$\varphi$ of the unitary transformation~(\ref{U}).
+Second, one solve the system~(\ref{rsred}) for elements of the initial sender density matrix,
+which for the case $K=1$ reads
 \begin{eqnarray}\label{rsred1}
 &&r^{(1)}_{i,j} = s^{(1)}_{i,j}, \;\; 1\le i,j \le N^{(S)}-1,\\\nonumber
 &&r^{(1)}_{N^{(S)},N^{(S)}} =s^{(0)}.
 \end{eqnarray}
-Since $s^{(1)}_{i, N^{(S)}} =0$,  $1\le i < N^{(S)}$, then 
-due to (\ref{T}), we obtain  $r^{(1)}_{i, N^{(S)}} =0, \;\; 1\le i < N^{(S)}$.
+Note that due to $s^{(1)}_{i, N^{(S)}} =0$,  $1\le i < N^{(S)}$ and (\ref{T}), 
+we obtain  $r^{(1)}_{i, N^{(S)}} =0, \;\; 1\le i < N^{(S)}$.
+Below we consider the cases of 3-~and~4-qubit sender.
 
 
+\subsubsection{Optimal unitary transformation finding for 3-~and~4-qubit sender}  
 
-Below we consider the cases of 3- and 4-qubit sender.
-In each case we find 2000 (???) solution of the system (\ref{T}) with $K=1$ and choose one for which the  solution to the linear system (\ref{rsred1}) yields  the maximum deviation $\delta$, given in Eq.(\ref{del}).
+Since a solution of the system~(\ref{T})~$(K=1)$ at the first step of perfectly transferred matrix construction is not unique,
+we are interested in a solution finding 
+that maximizes the deviation~(\ref{del}) for a perfect state produced in the second step.
+The solution and corresponding unitary transformation~(\ref{U}) we call as \textit{optimal}.
+%
+\textit{Optimal unitary transformation} satisfy to a global minimum of  
+% 
+\begin{equation} \label{eq:u-optimal-func}
+	L(\varphi) = S_{T}(\varphi) - \delta(\varphi),
+\end{equation}
+%
+where $S_{T}$ is a sum of absolute probabilities from~(\ref{T}),
+$\delta$ is a deviation~(\ref{del}) 
+and $\varphi$ is a set of free parameters of unitary transformation~(\ref{U}).
+
+We use a differential evolution algorithm~\cite{
+DifferentialEvolution1997,
+Wormington1999,
+Lampinen2002} from the SciPy~package~\cite{SciPy} to minimize the functional~(\ref{eq:u-optimal-func}). 
+Experiments were performed with higher population size (few thousands), higher mutation and lower recombination values to ensure global minimum. 
+Since deviation~(\ref{del}) maximization a sufficient condition for optimal unitary transformation, 
+we followed a strategy. 
+If a system~(\ref{T}) solution accuracy less than $10^{-3}$ 
+and minimization achievements at last ten generations less than $10^{-3}$ 
+the minimization task stops.
+The result of the minimization task was used as an acceptable assumption for the system~(\ref{T}). 
+If absolute functional~(\ref{eq:u-optimal-func}) difference with assumption and final results was less than $10^{-3}$  
+the final result was kept.
+Note, we also confirm some results by a brute-force search algorithm with random
+assumption.   
 
 
 \subsubsection{3-qubit sender}
@@ -2046,6 +2076,35 @@ Bondar, D.I., Pechen, A.N. Uncomputability and complexity of quantum control, Sc
 \bibitem{ABCVV}
 Apollaro T.J.G., Banchi L., Cuccoli A., Vaia R., and Verrucchi P. 99\%-fidelity ballistic
 quantum-state transfer through long uniform channels, Phys.Rev.A. {\bf 85}, (2012) 052319
+
+	
+\bibitem{DifferentialEvolution1997}
+	Storn, R and Price, K, Differential Evolution - a Simple and Efficient
+	Heuristic for Global Optimization over Continuous Spaces, Journal of Global
+	Optimization, 1997, 11, 341 - 359.
+
+\bibitem{Wormington1999}
+	Wormington, M., Panaccione, C., Matney, K. M., Bowen, D. K., -
+	Characterization of structures from X-ray scattering data using genetic
+	algorithms, Phil. Trans. R. Soc. Lond. A, 1999, 357, 2827-2848
+
+\bibitem{Lampinen2002}
+	Lampinen, J., A constraint handling approach for the differential evolution
+	algorithm. Proceedings of the 2002 Congress on Evolutionary Computation.
+	CEC¿02 (Cat. No. 02TH8600). Vol. 2. IEEE, 2002.
+
+\bibitem{SciPy}
+	Pauli Virtanen, Ralf Gommers, Travis E. Oliphant, Matt Haberland, Tyler
+	Reddy, David Cournapeau, Evgeni Burovski, Pearu Peterson, Warren Weckesser,
+	Jonathan Bright, Stéfan J. van der Walt, Matthew Brett, Joshua Wilson, K.
+	Jarrod Millman, Nikolay Mayorov, Andrew R. J. Nelson, Eric Jones, Robert
+	Kern, Eric Larson, CJ Carey, ¿lhan Polat, Yu Feng, Eric W. Moore, Jake
+	VanderPlas, Denis Laxalde, Josef Perktold, Robert Cimrman, Ian Henriksen,
+	E.A. Quintero, Charles R Harris, Anne M. Archibald, Antônio H. Ribeiro,
+	Fabian Pedregosa, Paul van Mulbregt, and SciPy 1.0 Contributors. (2020) SciPy
+	1.0: Fundamental Algorithms for Scientific Computing in Python. Nature
+	Methods, 17(3), 261-272.
+
 \end{thebibliography}
 
 \end{document}
